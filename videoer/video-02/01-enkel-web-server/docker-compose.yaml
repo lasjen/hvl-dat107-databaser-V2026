@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: enkel-webserver
+    container_name: webserver
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
+

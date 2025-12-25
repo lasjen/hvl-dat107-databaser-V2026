@@ -1,0 +1,84 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*.bak
+
+# Java/Maven/Gradle
+target/
+build/
+bin/
+out/
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+replay_pid*
+
+# Database Data Files
+**/postgres-data/
+**/mongodb-data/
+**/mysql-data/
+**/data/db/
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker Volumes and Runtime Files
+**/volumes/
+docker-compose.override.yml
+
+# Logs
+logs/
+*.log
+log/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Environment and Secrets
+.env
+.env.local
+.env.*.local
+secrets/
+*.pem
+*.key
+*.crt
+
+# Node modules (if any frontend/JS tools are added)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package Files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+

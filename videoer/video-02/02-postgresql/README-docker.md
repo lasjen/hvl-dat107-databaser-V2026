@@ -1,83 +1,93 @@
 # PostgreSQL Docker Setup
 
-This directory shows how to run PostgreSQL locally by using Docker Compose.:
+This directory contains a PostgreSQL database setup using Docker Compose for local development.
 
-## Configuration
+## Overview
 
-- **Database**: dat107_db
-- **User**: dat107
-- **Password**: dat107
-- **Port**: 5432
+- **Database Name**: `dat107_db`
+- **Username**: `dat107`
+- **Password**: `dat107`
+- **Port**: `5432`
+- **Container Name**: `dat107-postgres`
 
 ## Prerequisites
 
-The following installation is required go get started with Docker:
 - **Docker**: Install Docker Desktop or Docker Engine
+  - macOS: [Docker Desktop for Mac](https://docs.docker.com/desktop/mac/install/)
+  - Windows: [Docker Desktop for Windows](https://docs.docker.com/desktop/windows/install/)
+  - Linux: [Docker Engine](https://docs.docker.com/engine/install/)
 
-## Using Docker Compose 
+## Quick Start
+
+### Starting the Database
 
 ```bash
-# Start the database
+# Navigate to the directory
 cd videoer/video-02/02-postgresql
-docker-compose up -d
 
-# Stop the database
-cd videoer/video-02/02-postgresql
-docker-compose down
+# Start the database in detached mode
+docker-compose up -d
 ```
 
-### Manual Commands
+### Stopping the Database
+
+```bash
+# Stop and remove containers
+docker-compose down
+
+# Stop and remove containers, volumes, and images
+docker-compose down -v --rmi all
+```
 
 ## Connecting to the Database
 
-Use the provided connection script:
+### Using the Connection Script
 
-**Docker:**
+The easiest way to connect is using the provided script:
+
 ```bash
-./psql.sh
+sh connect.sh   # Mac/Linux
+connect.bat    # Windows
 ```
 
-Or connect manually using psql:
+### Manual Connection
 
-**With Docker:**<br>
-_Note! Since psql is running inside the container (and the database host) you do't need to specify the password or host._
+Connect manually using the PostgreSQL client inside the container:
+
 ```bash
-docker exec -it dat107-postgres psql -U dat107_user -d dat107_db
+docker exec -it dat107-postgres psql -U dat107 -d dat107_db
 ```
 
-## Useful Commands
+**Note**: Since `psql` runs inside the container where the database is hosted, you don't need to specify the password or host.
 
-**Docker:**
+## Database Migration
+
+Run SQL migration scripts to set up test tables and data:
+
 ```bash
-# View logs
-docker logs dat107-postgres
+# Run the migration script
+./migrate-db.sh # Mac/Linux
+migrate-db.bat  # Windows
 
-# Follow logs in real-time
-docker logs -f dat107-postgres
-
-# Stop the container
-docker stop dat107-postgres
-
-# Start the container
-docker start dat107-postgres
-
-# Remove the container
-docker rm dat107-postgres
-
-# Remove the image
-docker rmi dat107-postgres:latest
+# Or manually execute specific SQL files
+docker exec -i dat107-postgres psql -U dat107 -d dat107_db < sql/ansatte.sql
+docker exec -i dat107-postgres psql -U dat107 -d dat107_db < sql/hobbyhuset.sql
 ```
-
 
 ## Data Persistence
 
-Database data is stored in the `postgres-data/` directory and persists between container restarts. This directory is excluded from version control via `.gitignore`.
+- Database data is stored in the `postgres-data/` directory
+- Data persists between container restarts and removals
+- This directory is excluded from version control via `.gitignore`
+- To completely reset the database, remove this directory:
+  ```bash
+  docker-compose down -v
+  rm -rf postgres-data/
+  ```
 
-## Health Check
+## Additional Resources
 
-The Dockerfile includes a health check that verifies the database is ready to accept connections every 5 seconds.
-
-## Security Note
-
-⚠️ **Warning**: The database credentials are hardcoded for development purposes. In production environments, use environment variables or Docker secrets to manage sensitive information.
+- [PostgreSQL Official Documentation](https://www.postgresql.org/docs/)
+- [Docker Compose Documentation](https://docs.docker.com/compose/)
+- [PostgreSQL Docker Hub](https://hub.docker.com/_/postgres)
 

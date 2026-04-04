@@ -37,6 +37,7 @@ replay_pid*
 
 # Database Data Files
 **/postgres-data/
+**/postgres-data-simple/
 **/mongodb-data/
 **/mysql-data/
 **/data/db/

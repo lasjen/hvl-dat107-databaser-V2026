@@ -1,0 +1,17 @@
+--drop table ANSATT0;
+create table ANSATT0(ANSATTNR int primary key,ETTERNAVN varchar(25),FORNAVN varchar(25),ANSATTDATO date,STILLING varchar(25),LØNN int);
+insert into ANSATT0 values(1,'Veum','Varg','1996-01-01','Løpegutt',383000);
+insert into ANSATT0 values(2,'Stein','Trude','2004-10-19','DBA',470700);
+insert into ANSATT0 values(3,'Dudal','Inger-Lise','2012-12-24','Sekretær',490000);
+insert into ANSATT0 values(4,'Hansen','Hans','2010-08-23','Programmerer',525000);
+insert into ANSATT0 values(5,'Bjørnsen','Henrik','2014-01-01','Tekstforfatter',575000);
+insert into ANSATT0 values(6,'Gredelin','Sofie','2012-05-18','Underdirektør',825850);
+insert into ANSATT0 values(7,'Zimmermann','Robert','1999-05-17','Regnskapsfører',575000);
+insert into ANSATT0 values(8,'Nilsen','Lise','2016-04-03','Direktør',875340);
+insert into ANSATT0 values(11,'Fosheim','Katinka','2015-09-13','Selger',620000);
+insert into ANSATT0 values(13,'Lovløs','Ada','2009-08-12','Programmerer',584250);
+insert into ANSATT0 values(16,'Ibsen','Bjørnstjerne','2012-01-02','Tekstforfatter',546000);
+insert into ANSATT0 values(17,'Fleksnes','Marve','2013-05-17','Lagerleder',520120);
+insert into ANSATT0 values(20,'Felgen','Reodor','2005-12-12','Sykkelreperatør',479500);
+insert into ANSATT0 values(23,'Karius','Jens','2015-12-13','Salgssekretær',480390);
+insert into ANSATT0 values(29,'Wirkola','Gabriel','2018-04-21','Sekretær',455000);

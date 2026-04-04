@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   mongodb:
-    image: mongodb/mongodb-community-server:7.0
+    image: mongodb/mongodb-community-server:latest
     container_name: dat107-mongodb
     ports:
       - "27017:27017"

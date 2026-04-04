@@ -1,0 +1,1 @@
+xmllint --noout -schema birken-paamelding-uq.xsd birken-paamelding.xml

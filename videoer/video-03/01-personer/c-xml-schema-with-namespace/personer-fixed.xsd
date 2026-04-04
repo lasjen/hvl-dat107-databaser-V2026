@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      targetNamespace="http://home.hvl.no/databaser"
+      xmlns="http://home.hvl.no/databaser"
+      xmlns:dat="http://home.hvl.no/databaser"
+      elementFormDefault="qualified">
+
+<!-- Type Definisjoner - Simple -->
+    <xs:simpleType name="pnrType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fornavnType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+<!-- Type Definisjoner - Complex -->
+    <xs:complexType name="personerType">
+        <xs:sequence>
+            <xs:element name="person" type="personType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="personType">
+        <xs:sequence>
+            <xs:element name="pnr" type="pnrType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fornavn" type="fornavnType" />
+            <xs:element name="etternavn" type="xs:string" />
+            <xs:element name="barn" type="xs:integer" minOccurs="0"/>
+            <xs:element name="fodselsdato" type="xs:date" />
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- Element Definisjoner -->
+<!-- XPath er namespace‑sensitiv.
+     Derfor må vi prefikse element i xpath ustrykk med "dat:".  -->
+    <xs:element name="personer" type="personerType">
+        <xs:unique name="pnrUnique">
+            <xs:selector xpath="dat:person"/>
+            <xs:field xpath="dat:pnr"/>
+        </xs:unique>
+    </xs:element>
+</xs:schema>

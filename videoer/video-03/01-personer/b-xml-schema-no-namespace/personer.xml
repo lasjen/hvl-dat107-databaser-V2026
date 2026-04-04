@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="personer.xsd">
+
+    <person>
+        <pnr>0</pnr>
+        <etternavn>Nordmann</etternavn>
+        <fornavn>IdaMedEtVeldigLangtFornavn</fornavn>
+        <fodselsdato>1980-01-32</fodselsdato>
+    </person>
+
+    <person>
+        <pnr>2</pnr>
+        <fornavn>Kari</fornavn>
+        <etternavn>Pettersen</etternavn>
+        <fodselsdato>1993-08-23</fodselsdato>
+    </person>
+
+</personer>

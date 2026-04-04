@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="unqualified"
+           attributeFormDefault="unqualified">
+
+  <!-- Simple types -->
+   <xs:simpleType name="PersonIdType">
+      <xs:restriction base="xs:ID">
+         <xs:pattern value="[h,d]{1}[0-9]{4}"/>
+      </xs:restriction>
+   </xs:simpleType>
+
+   <xs:simpleType name="PoengType">
+      <xs:restriction base="xs:decimal">
+         <xs:minInclusive value="0.0"/>
+         <xs:maxInclusive value="3000.0"/>
+      </xs:restriction>
+   </xs:simpleType>
+
+   <xs:simpleType name="FNrType">
+      <xs:restriction base="xs:string">
+         <!-- Fødselsnummer: DDMMÅÅXXXXX -->
+         <!-- DD: 01–31, MM: 01–12, ÅÅ: 00–99, resten 5 sifre -->
+         <xs:pattern value="(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[0-2])\d{2}\d{5}"/>
+         <xs:length value="11"/>
+      </xs:restriction>
+   </xs:simpleType>
+
+
+      <!-- Complex types -->
+   <xs:complexType name="PersonType">
+      <xs:sequence>
+         <xs:element name="id" type="PersonIdType"/>
+         <xs:element name="navn" type="xs:string"/>
+         <xs:element name="fdato" type="xs:date"/>
+         <xs:element name="fnr" type="FNrType"/>
+         <xs:element name="medlem" type="xs:boolean"/>
+         <xs:element name="poeng" type="PoengType"/>
+         <xs:element name="hjemmeside" type="xs:anyURI"/>
+         <xs:element name="puljeId" type="xs:string"/>
+         <xs:element name="foresattId" type="xs:IDREF" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="PuljeType">
+      <xs:attribute name="pId" type="xs:string" use="required"/>
+      <xs:attribute name="startTid" type="xs:dateTime" use="required"/>
+   </xs:complexType>
+
+   <xs:complexType name="PuljerType">
+      <xs:sequence>
+         <xs:element name="pulje" type="PuljeType" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="BirkenType">
+      <xs:sequence>
+         <xs:element name="puljer" type="PuljerType" />
+         <xs:element name="person" type="PersonType" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <!-- Root element -->
+   <xs:element name="birken" type="BirkenType">
+      <!-- Enforce that all person/id values are unique -->
+      <xs:key name="personIdKey">
+         <xs:selector xpath="person"/>
+         <xs:field xpath="id"/>
+      </xs:key>
+
+      <!-- Enforce that all person/fnr values are unique using xs:unique -->
+      <xs:unique name="fnrUnique">
+         <xs:selector xpath="person"/>
+         <xs:field xpath="fnr"/>
+      </xs:unique>
+
+      <!-- If foresattId is present, it must reference an existing person/id -->
+      <xs:keyref name="foresattRef" refer="personIdKey">
+         <xs:selector xpath="person"/>
+         <xs:field xpath="foresattId"/>
+      </xs:keyref>
+
+      <!-- Enforce that all puljer/pulje/@pId values are unique (primary key) -->
+      <xs:key name="puljeIdKey">
+         <xs:selector xpath="puljer/pulje"/>
+         <xs:field xpath="@pId"/>
+      </xs:key>
+
+      <!-- Enforce that each person/puljeId references an existing puljer/pulje/@pId (foreign key) -->
+      <xs:keyref name="personPuljeRef" refer="puljeIdKey">
+         <xs:selector xpath="person"/>
+         <xs:field xpath="puljeId"/>
+      </xs:keyref>
+
+   </xs:element>
+
+</xs:schema>
+

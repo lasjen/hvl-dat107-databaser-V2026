@@ -24,10 +24,10 @@ echo "Starting database migration..."
 echo "================================"
 
 # Run ansatte.sql
-run_sql_file "${SQL_DIR}/ansatte.sql"
+#run_sql_file "${SQL_DIR}/ansatte.sql"
 
 # Run hobbyhuset.sql
-#run_sql_file "${SQL_DIR}/hobbyhuset.sql"
+run_sql_file "${SQL_DIR}/hobbyhuset.sql"
 
 echo "================================"
 echo "Database migration completed successfully!"

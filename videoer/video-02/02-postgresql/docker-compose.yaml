@@ -1,0 +1,14 @@
+services:
+  dat107-postgres:
+    image: postgres:15-alpine
+    container_name: dat107-postgres
+    environment:
+      POSTGRES_DB: dat107_db
+      POSTGRES_USER: dat107
+      POSTGRES_PASSWORD: dat107
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+

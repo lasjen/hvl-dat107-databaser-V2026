@@ -2,7 +2,7 @@
 
 # PostgreSQL connection configuration
 CONTAINER_NAME="dat107-postgres"
-DB_USER="dat107_user"
+DB_USER="dat107"
 DB_NAME="dat107_db"
 
 # Connect to PostgreSQL database

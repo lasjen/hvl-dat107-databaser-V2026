@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FILM SYSTEM "filmer.dtd">
+<FILM>
+   <!-- <ENFILM FilmNr="F001" Sensur="15"> -->
+   <ENFILM  Sensur="15">
+      <TITTEL>The Shawshank Redemption</TITTEL>
+      <SJANGER>Drama</SJANGER>
+      <PRODÅR>1994</PRODÅR>
+      <TEST>Denne bryter med DTD-en.</TEST>
+   </ENFILM>
+
+   <ENFILM FilmNr="F002" Sensur="13">
+      <TITTEL>The Dark Knight</TITTEL>
+      <SJANGER>Action</SJANGER>
+      <PRODÅR>2008</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F003" Sensur="18">
+      <TITTEL>Pulp Fiction</TITTEL>
+      <SJANGER>Crime</SJANGER>
+      <PRODÅR>1994</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F004" Sensur="13">
+      <TITTEL>Forrest Gump</TITTEL>
+      <SJANGER>Drama</SJANGER>
+      <PRODÅR>1994</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F005" Sensur="13">
+      <TITTEL>Inception</TITTEL>
+      <SJANGER>Sci-Fi</SJANGER>
+      <PRODÅR>2010</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F006" Sensur="18">
+      <TITTEL>The Godfather</TITTEL>
+      <SJANGER>Crime</SJANGER>
+      <PRODÅR>1972</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F007" Sensur="13">
+      <TITTEL>Interstellar</TITTEL>
+      <SJANGER>Sci-Fi</SJANGER>
+      <PRODÅR>2014</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F008" Sensur="A">
+      <TITTEL>The Lion King</TITTEL>
+      <SJANGER>Animation</SJANGER>
+      <PRODÅR>1994</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F009">
+      <TITTEL>Titanic</TITTEL>
+      <SJANGER>Romance</SJANGER>
+      <PRODÅR>1997</PRODÅR>
+   </ENFILM>
+
+   <ENFILM FilmNr="F010" Sensur="13">
+      <TITTEL>The Matrix</TITTEL>
+      <SJANGER>Sci-Fi</SJANGER>
+      <PRODÅR>1999</PRODÅR>
+   </ENFILM>
+</FILM>
+

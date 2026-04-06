@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="personer-xsl-example.xsl"?>
+<personer>
+    <person>
+        <pnr>1</pnr>
+        <fornavn>Ola Knut</fornavn>
+        <etternavn>Nordmann</etternavn>
+        <barn>1</barn>
+        <fodselsdato>1980-01-01</fodselsdato>
+    </person>
+    <person>
+        <pnr>2</pnr>
+        <fornavn>Johanne</fornavn>
+        <etternavn>Svenske</etternavn>
+        <barn>4</barn>
+        <fodselsdato>1993-08-23</fodselsdato>
+    </person>
+    <person>
+        <pnr>3</pnr>
+        <fornavn>Kari</fornavn>
+        <etternavn>Nordmann</etternavn>
+        <fodselsdato>1997-11-21</fodselsdato>
+    </person>
+    <person>
+        <pnr>4</pnr>
+        <fornavn>Nils</fornavn>
+        <etternavn>Svendsen</etternavn>
+        <fodselsdato>1990-03-12</fodselsdato>
+    </person>
+</personer>

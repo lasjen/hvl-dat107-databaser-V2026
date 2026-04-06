@@ -16,8 +16,8 @@
       <!-- Foresatt -->
       <id>h0001</id>
       <navn>Lasse Jenssen</navn>
-      <fdato>1983-05-12</fdato>
-      <fnr>12058348217</fnr>
+      <fdato>1963-05-12</fdato>
+      <fnr>12056348217</fnr>
       <medlem>true</medlem>
       <poeng>1200.01</poeng>
       <hjemmeside>https://www.jcon.no/blog</hjemmeside>
@@ -39,12 +39,12 @@
    <!-- Barn under 16 år -->
    <person>
       <id>d0005</id>
-      <navn>Karianne Blikra Jenssen</navn>
+      <navn>Nora Jenssen</navn>
       <fdato>2012-12-02</fdato>
       <fnr>02121250683</fnr>
       <medlem>false</medlem>
       <poeng>621.23</poeng>
-      <hjemmeside>https://www.blikra.no/karianne</hjemmeside>
+      <hjemmeside>https://www.jenssen.no/nora</hjemmeside>
       <puljeId>5</puljeId>
       <foresattId>h0001</foresattId>
    </person>

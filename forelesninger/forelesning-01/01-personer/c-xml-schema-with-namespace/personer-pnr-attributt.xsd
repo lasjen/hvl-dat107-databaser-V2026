@@ -10,9 +10,9 @@
     <xs:simpleType name="pnrType">
         <xs:restriction base="xs:integer">
             <xs:minInclusive value="1"/>
-            <xs:maxInclusive value="500"/>
         </xs:restriction>
     </xs:simpleType>
+
     <xs:simpleType name="fornavnType">
         <xs:restriction base="xs:string">
             <xs:maxLength value="20"/>
@@ -22,13 +22,13 @@
 <!-- Type Definisjoner - Simple -->
     <xs:complexType name="personerType">
         <xs:sequence>
-            <xs:element name="person" type="dat:personType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="person" type="personType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="personType">
         <xs:sequence>
-            <xs:element name="fornavn" type="dat:fornavnType" />
+            <xs:element name="fornavn" type="fornavnType" />
             <xs:element name="etternavn" type="xs:string" />
             <xs:element name="barn" type="xs:integer" minOccurs="0"/>
             <xs:element name="fodselsdato" type="xs:date" />
@@ -37,7 +37,7 @@
     </xs:complexType>
 
 <!-- Element Definisjoner -->
-    <xs:element name="personer" type="dat:personerType">
+    <xs:element name="personer" type="personerType">
         <xs:unique name="pnrUnique" >
             <xs:selector xpath="dat:person"/>
             <xs:field xpath="@pnr"/>

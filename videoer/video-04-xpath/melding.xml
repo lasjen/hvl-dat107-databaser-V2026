@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tavle>
+   <melding mld="SQL ruler. Lenge leve NoSQL.">
+      <avsender aId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </avsender>
+      <mottaker mId="1002">
+         <fornavn>Ola</fornavn><etternavn>Hansen</etternavn>
+      </mottaker>
+   </melding>
+</tavle>

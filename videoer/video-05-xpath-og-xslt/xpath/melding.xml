@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tavle>
+   <melding mld="SQL ruler. Lenge leve NoSQL.">
+      <avsender aId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </avsender>
+      <mottaker mId="1002">
+         <fornavn>Ola</fornavn><etternavn>Hansen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XPath is an important feature in XML.">
+      <avsender aId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </avsender>
+      <mottaker mId="1003">
+         <fornavn>Nina</fornavn><etternavn>Johnsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="MongoDB er fantastisk for dokumentlagring!">
+      <avsender aId="1002">
+         <fornavn>Ola</fornavn><etternavn>Hansen</etternavn>
+      </avsender>
+      <mottaker mId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XML Schema definerer strukturen på XML dokumenter.">
+      <avsender aId="1003">
+         <fornavn>Nina</fornavn><etternavn>Johnsen</etternavn>
+      </avsender>
+      <mottaker mId="1004">
+         <fornavn>Per</fornavn><etternavn>Berg</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="Cassandra gir god skalerbarhet for store datamengder.">
+      <avsender aId="1004">
+         <fornavn>Per</fornavn><etternavn>Berg</etternavn>
+      </avsender>
+      <mottaker mId="1002">
+         <fornavn>Ola</fornavn><etternavn>Hansen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XSLT kan transformere XML til HTML.">
+      <avsender aId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </avsender>
+      <mottaker mId="1005">
+         <fornavn>Emma</fornavn><etternavn>Olsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="Redis er lynrask for caching!">
+      <avsender aId="1005">
+         <fornavn>Emma</fornavn><etternavn>Olsen</etternavn>
+      </avsender>
+      <mottaker mId="1003">
+         <fornavn>Nina</fornavn><etternavn>Johnsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XQuery gjør det enkelt å spørre XML data.">
+      <avsender aId="1002">
+         <fornavn>Ola</fornavn><etternavn>Hansen</etternavn>
+      </avsender>
+      <mottaker mId="1006">
+         <fornavn>Lars</fornavn><etternavn>Nilsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="Neo4j er perfekt for grafbaserte relasjoner.">
+      <avsender aId="1006">
+         <fornavn>Lars</fornavn><etternavn>Nilsen</etternavn>
+      </avsender>
+      <mottaker mId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XML namespaces forhindrer navnekollisjoner.">
+      <avsender aId="1003">
+         <fornavn>Nina</fornavn><etternavn>Johnsen</etternavn>
+      </avsender>
+      <mottaker mId="1007">
+         <fornavn>Anne</fornavn><etternavn>Svendsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="DynamoDB skalerer automatisk med trafikken.">
+      <avsender aId="1007">
+         <fornavn>Anne</fornavn><etternavn>Svendsen</etternavn>
+      </avsender>
+      <mottaker mId="1004">
+         <fornavn>Per</fornavn><etternavn>Berg</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="DTD er en eldre måte å validere XML på.">
+      <avsender aId="1004">
+         <fornavn>Per</fornavn><etternavn>Berg</etternavn>
+      </avsender>
+      <mottaker mId="1008">
+         <fornavn>Sofie</fornavn><etternavn>Andersen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="CouchDB bruker JSON for å lagre dokumenter.">
+      <avsender aId="1008">
+         <fornavn>Sofie</fornavn><etternavn>Andersen</etternavn>
+      </avsender>
+      <mottaker mId="1005">
+         <fornavn>Emma</fornavn><etternavn>Olsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="SOAP bruker XML for meldingsutveksling.">
+      <avsender aId="1005">
+         <fornavn>Emma</fornavn><etternavn>Olsen</etternavn>
+      </avsender>
+      <mottaker mId="1002">
+         <fornavn>Ola</fornavn><etternavn>Hansen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="HBase er bygget på toppen av Hadoop.">
+      <avsender aId="1006">
+         <fornavn>Lars</fornavn><etternavn>Nilsen</etternavn>
+      </avsender>
+      <mottaker mId="1009">
+         <fornavn>Martin</fornavn><etternavn>Kristiansen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XML er selvbeskrivende og lesbart for mennesker.">
+      <avsender aId="1009">
+         <fornavn>Martin</fornavn><etternavn>Kristiansen</etternavn>
+      </avsender>
+      <mottaker mId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="ElasticSearch gir kraftig søkefunksjonalitet.">
+      <avsender aId="1001">
+         <fornavn>Kari</fornavn><etternavn>Lie</etternavn>
+      </avsender>
+      <mottaker mId="1010">
+         <fornavn>Jonas</fornavn><etternavn>Pedersen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XSD er mer fleksibelt enn DTD.">
+      <avsender aId="1010">
+         <fornavn>Jonas</fornavn><etternavn>Pedersen</etternavn>
+      </avsender>
+      <mottaker mId="1003">
+         <fornavn>Nina</fornavn><etternavn>Johnsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="RavenDB er en dokumentdatabase for .NET.">
+      <avsender aId="1007">
+         <fornavn>Anne</fornavn><etternavn>Svendsen</etternavn>
+      </avsender>
+      <mottaker mId="1006">
+         <fornavn>Lars</fornavn><etternavn>Nilsen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="XLink definerer lenker i XML dokumenter.">
+      <avsender aId="1008">
+         <fornavn>Sofie</fornavn><etternavn>Andersen</etternavn>
+      </avsender>
+      <mottaker mId="1009">
+         <fornavn>Martin</fornavn><etternavn>Kristiansen</etternavn>
+      </mottaker>
+   </melding>
+   <melding mld="InfluxDB er optimalisert for tidsseriedata.">
+      <avsender aId="1009">
+         <fornavn>Martin</fornavn><etternavn>Kristiansen</etternavn>
+      </avsender>
+      <mottaker mId="1010">
+         <fornavn>Jonas</fornavn><etternavn>Pedersen</etternavn>
+      </mottaker>
+   </melding>
+</tavle>

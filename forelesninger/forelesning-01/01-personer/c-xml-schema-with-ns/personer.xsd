@@ -19,7 +19,14 @@
         </xs:restriction>
     </xs:simpleType>
 
-<!-- Type Definisjoner - Complex -->
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                  value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type Definisjoner - Complex -->
     <xs:complexType name="personerType">
         <xs:sequence>
             <xs:element name="person" type="personType" minOccurs="1" maxOccurs="unbounded" />
@@ -28,21 +35,26 @@
 
     <xs:complexType name="personType">
         <xs:sequence>
-            <xs:element name="pnr" type="pnrType" minOccurs="1" maxOccurs="1"/>
             <xs:element name="fornavn" type="fornavnType" />
             <xs:element name="etternavn" type="xs:string" />
             <xs:element name="barn" type="xs:integer" minOccurs="0"/>
             <xs:element name="fodselsdato" type="xs:date" />
+            <xs:element name="email" type="emailType" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="pnr" type="pnrType" use="required"/>
     </xs:complexType>
 
 <!-- Element Definisjoner -->
 <!-- XPath er namespace‑sensitiv.
      Derfor må vi prefikse element i xpath ustrykk med "dat:".  -->
     <xs:element name="personer" type="personerType">
-        <xs:unique name="pnrUnique">
+        <xs:key name="pnrKey">
             <xs:selector xpath="dat:person"/>
-            <xs:field xpath="dat:pnr"/>
+            <xs:field xpath="@pnr"/>
+        </xs:key>
+        <xs:unique name="emailUnique">
+            <xs:selector xpath="dat:person"/>
+            <xs:field xpath="dat:email"/>
         </xs:unique>
     </xs:element>
 </xs:schema>

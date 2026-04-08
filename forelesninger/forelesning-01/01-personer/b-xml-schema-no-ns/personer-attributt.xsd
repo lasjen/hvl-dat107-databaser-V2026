@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
       xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <!--
-      xmlns="http://home.hvl.no/databaser"
-      targetNamespace="http://home.hvl.no/databaser"
-      elementFormDefault="qualified"
-  -->
 
 <!-- Type Definisjoner - Simple -->
   <xs:simpleType name="pnrType">
@@ -13,11 +8,13 @@
       <xs:minExclusive value="0"/>
     </xs:restriction>
   </xs:simpleType>
+
   <xs:simpleType name="fornavnType">
     <xs:restriction base="xs:string">
       <xs:maxLength value="20" />
     </xs:restriction>
   </xs:simpleType>
+
   <xs:simpleType name="etternavnType">
     <xs:restriction base="xs:string">
       <xs:maxLength value="50" />
@@ -27,11 +24,11 @@
 <!-- Type Definisjoner - Complex -->
   <xs:complexType name="personType">
     <xs:sequence>
-      <xs:element name="pnr" type="pnrType" />
       <xs:element name="fornavn" type="fornavnType" />
       <xs:element name="etternavn" type="etternavnType" />
       <xs:element name="fodselsdato" type="xs:date" />
     </xs:sequence>
+    <xs:attribute name="pnr" type="pnrType" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="personerType">

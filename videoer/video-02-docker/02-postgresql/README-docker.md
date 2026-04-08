@@ -46,7 +46,7 @@ docker-compose down -v --rmi all
 The easiest way to connect is using the provided script:
 
 ```bash
-sh connect.sh   # Mac/Linux
+sh mongosh.sh   # Mac/Linux
 connect.bat    # Windows
 ```
 

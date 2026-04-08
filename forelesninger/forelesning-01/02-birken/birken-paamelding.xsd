@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="unqualified"
-           attributeFormDefault="unqualified">
+<xs:schema
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified"
+      targetNamespace="http://oving.hvl.no/birken"
+      xmlns="http://oving.hvl.no/birken"
+      xmlns:bir="http://oving.hvl.no/birken">
 
   <!-- Simple types -->
    <xs:simpleType name="PersonIdType">
-      <xs:restriction base="xs:ID">
+      <xs:restriction base="xs:string">
          <xs:pattern value="[h,d]{1}[0-9]{4}"/>
       </xs:restriction>
    </xs:simpleType>
@@ -64,32 +67,32 @@
    <xs:element name="birken" type="BirkenType">
       <!-- Enforce that all person/id values are unique -->
       <xs:key name="personIdKey">
-         <xs:selector xpath="person"/>
-         <xs:field xpath="id"/>
+         <xs:selector xpath="bir:person"/>
+         <xs:field xpath="bir:id"/>
       </xs:key>
 
       <!-- Enforce that all person/fnr values are unique using xs:unique -->
       <xs:unique name="fnrUnique">
-         <xs:selector xpath="person"/>
-         <xs:field xpath="fnr"/>
+         <xs:selector xpath="bir:person"/>
+         <xs:field xpath="bir:fnr"/>
       </xs:unique>
 
       <!-- If foresattId is present, it must reference an existing person/id -->
       <xs:keyref name="foresattRef" refer="personIdKey">
-         <xs:selector xpath="person"/>
-         <xs:field xpath="foresattId"/>
+         <xs:selector xpath="bir:person"/>
+         <xs:field xpath="bir:foresattId"/>
       </xs:keyref>
 
       <!-- Enforce that all puljer/pulje/@pId values are unique (primary key) -->
       <xs:key name="puljeIdKey">
-         <xs:selector xpath="puljer/pulje"/>
+         <xs:selector xpath="bir:puljer/pulje"/>
          <xs:field xpath="@pId"/>
       </xs:key>
 
       <!-- Enforce that each person/puljeId references an existing puljer/pulje/@pId (foreign key) -->
       <xs:keyref name="personPuljeRef" refer="puljeIdKey">
-         <xs:selector xpath="person"/>
-         <xs:field xpath="puljeId"/>
+         <xs:selector xpath="bir:person"/>
+         <xs:field xpath="bil:puljeId"/>
       </xs:keyref>
 
    </xs:element>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <birken xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="birken-paamelding.xsd">
+        xsi:schemaLocation="birken-paamelding.xsd"
+         xmlns="http://oving.hvl.no/birken">
 
    <!-- Puljer -->
    <puljer>
@@ -26,14 +27,16 @@
 
    <person>
       <!-- Foresatt -->
-      <id>h0002</id>
+      <id>h0001</id>
       <navn>Ola Hansen</navn>
-      <fdato>1975-03-06</fdato>
-      <fnr>06037515940</fnr>
+      <fdato>1975-03-00</fdato>
       <medlem>true</medlem>
-      <poeng>1405.21</poeng>
-      <hjemmeside>https://www.olahansen.no</hjemmeside>
-      <puljeId>1</puljeId>
+      <poeng>4405.21</poeng>
+      <hjemmeside>Kan være hva som helst</hjemmeside>
+      <!-- <hjemmeside>https://www.olahansen.no</hjemmeside> -->
+      <pulje>1</pulje>
+      <starttid>2026-03-15</starttid>
+      <!-- <starttid>2026-03-15T07:30:00</starttid> -->
    </person>
 
    <!-- Barn under 16 år -->

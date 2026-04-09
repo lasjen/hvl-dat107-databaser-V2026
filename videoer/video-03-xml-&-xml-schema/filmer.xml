@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <!DOCTYPE FILM SYSTEM "filmer.dtd"> -->
+<!DOCTYPE FILM SYSTEM "filmer.dtd">
 
 <FILM>
    <!-- <ENFILM FilmNr="F001" Sensur="15"> -->
-   <ENFILM  Sensur="15">
+   <ENFILM  FilmNr="F001" Sensur="15">
       <TITTEL>The Shawshank Redemption</TITTEL>
       <SJANGER>Drama</SJANGER>
       <PRODÅR>1994</PRODÅR>
-      <TEST>Denne bryter med DTD-en.</TEST>
+      <!-- <TEST>Denne bryter med DTD-en.</TEST> -->
    </ENFILM>
 
    <ENFILM FilmNr="F002" Sensur="13">

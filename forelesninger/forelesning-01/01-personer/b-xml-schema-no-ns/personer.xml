@@ -3,10 +3,10 @@
           xsi:noNamespaceSchemaLocation="personer.xsd">
 
     <person>
-        <pnr>0</pnr>
+        <pnr>1</pnr>
+        <fornavn>Ida</fornavn>
         <etternavn>Nordmann</etternavn>
-        <fornavn>IdaMedEtVeldigLangtFornavn</fornavn>
-        <fodselsdato>1980-01-32</fodselsdato>
+        <fodselsdato>1980-01-31</fodselsdato>
     </person>
 
     <person>

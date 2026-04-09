@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           xmlns="http://www.hvl.no"
+           targetNamespace="http://www.hvl.no"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+   <!-- Elementdefinisjoner -->
+   <xsd:element name="bøker" type="bøkerType" />
+
+   <!-- Typedefinisjoner: COMPLEX -->
+   <xsd:complexType name="bøkerType">
+      <xsd:sequence>
+         <xsd:element name="bok" type="bokType" minOccurs="0" maxOccurs="unbounded" />
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="bokType">
+      <xsd:sequence>
+         <xsd:element name="tittel" type="tittelType" />
+         <xsd:element name="forfattere" type="forfattereType" />
+         <xsd:element name="format" type="formatType" />
+         <xsd:element name="utgivelsesår" type="utgivelsesårType" />
+         <xsd:element name="forlag" type="forlagType" />
+         <xsd:element name="språk" type="språkType" />
+         <xsd:element name="emner" type="emnerType" />
+         <xsd:element name="sider" type="siderType" minOccurs="0"/>
+         <xsd:element name="pris" type="xsd:decimal" minOccurs="0"/>
+      </xsd:sequence>
+      <xsd:attribute name="isbn" type="isbnType" use="required" />
+   </xsd:complexType>
+
+   <xsd:complexType name="forfattereType">
+      <xsd:sequence>
+         <xsd:element name="forfatter" type="forfatterType" minOccurs="1" maxOccurs="unbounded" />
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="forfatterType">
+      <xsd:sequence>
+         <xsd:element name="fornavn" type="navnType" />
+         <xsd:element name="etternavn" type="navnType" />
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="emnerType">
+      <xsd:sequence>
+         <xsd:element name="emne" type="xsd:string" minOccurs="1" maxOccurs="unbounded" />
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <!-- Typedefinisjoner: SIMPLE -->
+   <xsd:simpleType name="isbnType">
+      <xsd:restriction base="xsd:string">
+         <xsd:pattern value="97[8|9]\d{10}"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="tittelType">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="100"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="formatType">
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="Pocket"/>
+         <xsd:enumeration value="Innbundet"/>
+         <xsd:enumeration value="E-bok" />
+         <xsd:enumeration value="Lydbok" />
+      </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="utgivelsesårType">
+      <xsd:restriction base="xsd:integer">
+         <xsd:minInclusive value="1970"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="forlagType">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="100"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="språkType">
+      <xsd:restriction base="xsd:string">
+         <xsd:enumeration value="Norsk,Bokmål"/>
+         <xsd:enumeration value="Norsk,Nynorsk"/>
+         <xsd:enumeration value="Engelsk"/>
+         <xsd:enumeration value="Tysk"/>
+         <xsd:enumeration value="Fransk"/>
+         <xsd:enumeration value="Spansk"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="navnType">
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+         <xsd:maxLength value="50"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+   <xsd:simpleType name="siderType">
+      <xsd:restriction base="xsd:integer">
+         <xsd:minInclusive value="1"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+</xsd:schema>

@@ -111,5 +111,12 @@ return
       </dato>
     }
   </seksjon>
+  <seksjon tittel="11. Processing-Instructions">
+      <beskrivelse>Henter P-I av typen xml-stylesheet</beskrivelse>
+      {
+        let $pi := $doc/processing-instruction("xml-stylesheet")
+        return $pi
+      }
+    </seksjon>
 </resultat>
 

@@ -1,0 +1,52 @@
+
+/* Print-oppsett – nøkternt, sort/hvitt, papirvennlig */
+
+@page {
+    margin: 2.5cm;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11pt;
+    color: black;
+    background: white;
+}
+
+/* Person-tittel */
+h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding-bottom: 2mm;
+    margin-top: 1.2cm;
+    margin-bottom: 0.3cm;
+}
+
+/* Navnlinje */
+p {
+    margin: 0.2cm 0;
+    font-weight: normal;
+}
+
+/* Fødselsdato – egen linje */
+br {
+    display: none;
+}
+
+p::after {
+    content: "";
+    display: block;
+    margin-bottom: 0.4cm;
+}
+
+/* Fjern alt visuelt fjas */
+* {
+    box-shadow: none !important;
+    color: black !important;
+    background: none !important;
+}
+
+/* Unngå sidesplitt midt i en person */
+h3, p {
+    page-break-inside: avoid;
+}

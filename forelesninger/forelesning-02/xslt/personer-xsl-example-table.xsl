@@ -2,6 +2,11 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" >
     <xsl:template match="personer">
         <HTML>
+            <HEAD>
+                <TITLE>Personer</TITLE>
+                <link rel="stylesheet" type="text/css" href="css/table.css"/>
+                <link rel="stylesheet" href="css/print-table.css" media="print" />
+            </HEAD>
             <BODY>
                 <h1>Personer</h1>
                 <TABLE border='1' style='table-layout:fixed' width='600'>
@@ -12,6 +17,7 @@
                         <TD><b>Antall barn</b></TD>
                     </TR>
                     <xsl:for-each select="person[barn>0]">
+                        <!-- <xsl:sort select="barn" data-type="number" order="descending"/> -->
                         <TR>
                             <TD><xsl:value-of select='pnr' /></TD>
                             <TD><xsl:value-of select="fornavn"/> <xsl:text> </xsl:text> <xsl:value-of select="etternavn"/></TD>

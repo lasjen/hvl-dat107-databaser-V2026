@@ -1,0 +1,187 @@
+<?xml version = "1.0" encoding="utf-8"?>
+<bøker xmlns="http://www.hvl.no"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.hvl.no bøker.xsd">
+   <bok isbn = "9788215032511">
+      <tittel>Databasesystemer</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Bjørn</fornavn>
+            <etternavn>Kristoffersen</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Pocket</format>
+      <utgivelsesår>2020</utgivelsesår>
+      <forlag>Universitetsforlaget</forlag>
+      <språk>Norsk,Bokmål</språk>
+      <emner>
+         <emne>Databaser</emne>
+         <emne>SQL</emne>
+         <emne>Relasjonsmodellen</emne>
+         <emne>Datamodellering</emne>
+      </emner>
+      <sider>500</sider>
+      <pris>729</pris>
+   </bok>
+   <bok isbn="9788269333008">
+      <tittel>Programmering i Python - algoritmer og kode</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Knut</fornavn>
+            <etternavn>Skrindo</etternavn>
+         </forfatter>
+         <forfatter>
+            <fornavn>Øystein Johannes</fornavn>
+            <etternavn>Weider</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Pocket</format>
+      <utgivelsesår>2023</utgivelsesår>
+      <forlag>Lærebokforlaget</forlag>
+      <språk>Norsk,Bokmål</språk>
+      <emner>
+         <emne>Python</emne>
+         <emne>Programmering</emne>
+         <emne>Algoritmer</emne>
+      </emner>
+      <sider>255</sider>
+      <pris>495</pris>
+   </bok>
+   <bok isbn="9788205381056">
+      <tittel>Databaser</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Kjell</fornavn>
+            <etternavn>Toft Hansen</etternavn>
+         </forfatter>
+         <forfatter>
+            <fornavn>Tore</fornavn>
+            <etternavn>Mallaug</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Pocket</format>
+      <utgivelsesår>2008</utgivelsesår>
+      <forlag>Gyldendal akademisk</forlag>
+      <språk>Norsk,Bokmål</språk>
+      <emner>
+         <emne>Relasjonsdatabaser</emne>
+         <emne>SQL</emne>
+         <emne>Datamodellering</emne>
+         <emne>Normalisering</emne>
+      </emner>
+      <sider>356</sider>
+   </bok>
+   <bok isbn="9780321834577">
+      <tittel>Implementing Domain-Driven Design</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Vaughn</fornavn>
+            <etternavn>Vernon</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Innbundet</format>
+      <utgivelsesår>2013</utgivelsesår>
+      <forlag>Addison-Wesley Educational Publishers Inc</forlag>
+      <språk>Engelsk</språk>
+      <emner>
+         <emne>Application Design</emne>
+         <emne>Software Engineering</emne>
+         <emne>Domain-Driven Design</emne>
+      </emner>
+      <sider>656</sider>
+   </bok>
+   <bok isbn="9789365890426">
+      <tittel>Essential PostgreSQL</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Swati</fornavn>
+            <etternavn>Saxena</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Pocket</format>
+      <utgivelsesår>2024</utgivelsesår>
+      <forlag>BPB Publications</forlag>
+      <språk>Engelsk</språk>
+      <emner>
+         <emne>Relasjonsdatabaser</emne>
+         <emne>PostgreSQL</emne>
+         <emne>Datamodellering</emne>
+         <emne>SQL</emne>
+      </emner>
+      <sider>342</sider>
+      <pris>439</pris>
+   </bok>
+   <bok isbn="9781781101452">
+      <tittel>Fantastic beasts</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Hana</fornavn>
+            <etternavn>Walker-Brown</etternavn>
+         </forfatter>
+         <forfatter>
+            <fornavn>Mark</fornavn>
+            <etternavn>Salisbury</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Lydbok</format>
+      <!-- <lest-av>Dan Fogler</lest-av> -->
+      <utgivelsesår>2018</utgivelsesår>
+      <forlag>Pottermore from J.K. Rowling</forlag>
+      <språk>Engelsk</språk>
+      <emner>
+         <emne>Film</emne>
+         <emne>Fantastisk litteratur</emne>
+         <emne>Skuespillere</emne>
+      </emner>
+      <pris>239</pris>
+   </bok>
+   <bok isbn="9781491954461">
+      <tittel>MongoDB: The Definitive Guide (3-Edition)</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Eoin</fornavn>
+            <etternavn>Brazil</etternavn>
+         </forfatter>
+         <forfatter>
+            <fornavn>Shannon</fornavn>
+            <etternavn>Bradshaw</etternavn>
+         </forfatter>
+         <forfatter>
+            <fornavn>Kristina</fornavn>
+            <etternavn>Chodorow</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Pocket</format>
+      <utgivelsesår>2019</utgivelsesår>
+      <forlag>O'Reilly Media</forlag>
+      <språk>Engelsk</språk>
+      <emner>
+         <emne>NoSQL database</emne>
+         <emne>Documents</emne>
+         <emne>JSON</emne>
+      </emner>
+      <sider>425</sider>
+      <pris>749</pris>
+   </bok>
+   <bok isbn="9781491915103">
+      <tittel>XQuery (2.edition)</tittel>
+      <forfattere>
+         <forfatter>
+            <fornavn>Priscilla</fornavn>
+            <etternavn>Walmsley</etternavn>
+         </forfatter>
+      </forfattere>
+      <format>Pocket</format>
+      <utgivelsesår>2016</utgivelsesår>
+      <forlag>O'Reilly Media</forlag>
+      <språk>Engelsk</språk>
+      <emner>
+         <emne>XML</emne>
+         <emne>XML Schema</emne>
+         <emne>XSL Transformations</emne>
+         <emne>XQuery</emne>
+      </emner>
+      <sider>758</sider>
+      <pris>669</pris>
+   </bok>
+</bøker>

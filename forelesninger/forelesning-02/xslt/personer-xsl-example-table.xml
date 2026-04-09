@@ -18,7 +18,14 @@
          <pnr>3</pnr>
          <fornavn>Per</fornavn>
          <etternavn>Dansken</etternavn>
+         <barn>4</barn>
          <fodselsdato>1993-08-23</fodselsdato>
-        <barn>4</barn>
     </person>
+   <person>
+      <pnr>4</pnr>
+      <fornavn>Odne</fornavn>
+      <etternavn>Hansen</etternavn>
+      <barn>5</barn>
+      <fodselsdato>1991-08-23</fodselsdato>
+   </person>
 </personer>

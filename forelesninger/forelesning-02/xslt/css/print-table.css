@@ -1,0 +1,60 @@
+/* Print-specific Table Styling */
+
+/* Hide the heading when printing */
+h1 {
+    display: none;
+}
+
+/* Table Styling for Print */
+table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    width: 100%;
+}
+
+/* Table Header */
+table tr:first-child {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color: #000;
+}
+
+table tr:first-child td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+/* Table Data Cells */
+table td {
+    padding: 6px 8px;
+    border: 1px solid #999;
+    text-align: left;
+}
+
+/* Remove hover effects and alternating colors for print */
+table tr:hover {
+    background-color: transparent;
+}
+
+table tr:nth-child(odd),
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Page break handling */
+table {
+    page-break-inside: avoid;
+}
+
+table tr {
+    page-break-inside: avoid;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 10mm;
+    font-family: Arial, sans-serif;
+}

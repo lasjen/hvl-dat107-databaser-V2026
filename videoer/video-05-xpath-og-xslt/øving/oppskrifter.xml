@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="oppskrifter.xsl"?>
+
+<oppskrifter xmlns="http://oving.hvl.no/databaser"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://oving.hvl.no/databaser oppskrifter.xsd">
+    <oppskrift>
+        <navn>Norsk frokost</navn>
+        <vanskelighetsgrad>Lett</vanskelighetsgrad>
+        <tid>10 min</tid>
+        <porsjoner>1</porsjoner>
+        <ingredienser>
+            <ingrediens navn="brød" mengde="2" enhet="skiver"/>
+            <ingrediens navn="smør" mengde="1" enhet="ss"/>
+            <ingrediens navn="brunost" mengde="50" enhet="g"/>
+            <ingrediens navn="egg" mengde="2" enhet="stk"/>
+            <ingrediens navn="salt og pepper" mengde="1" enhet="ss"/>
+            <ingrediens navn="frukt" mengde="1" enhet="stk"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Stek egg på smør i pannen til de er stekte slik du liker dem.</steg>
+            <steg id="2">Toastbrødet og smør det godt.</steg>
+            <steg id="3">Legg på brunost og server med stekt egg og frisk frukt.</steg>
+        </metode>
+        <kommentar>En klassisk norsk frokost som er både enkel og næringsrik. Perfekt start på dagen!</kommentar>
+        <innhold kalorier="450" fett="18" karbohydrater="35" proteiner="22"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Pannekaker</navn>
+        <vanskelighetsgrad>Lett</vanskelighetsgrad>
+        <tid>20 min</tid>
+        <porsjoner>4</porsjoner>
+        <ingredienser>
+            <ingrediens navn="mel" mengde="250" enhet="g"/>
+            <ingrediens navn="egg" mengde="2" enhet="stk"/>
+            <ingrediens navn="melk" mengde="3" enhet="dl"/>
+            <ingrediens navn="salt" mengde="1" enhet="ts"/>
+            <ingrediens navn="smør" mengde="50" enhet="g"/>
+            <ingrediens navn="jam eller syltetøy" mengde="4" enhet="ss"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Bland mel og salt i en bolle.</steg>
+            <steg id="2">Visp sammen egg og melk, og bland det sammen med mel.</steg>
+            <steg id="3">Smelt smør og bland det i deigen. La den stå 30 minutter.</steg>
+            <steg id="4">Stk pannekaker på sterk varme til de er gyllne på begge sider.</steg>
+            <steg id="5">Server med jam, sitron eller frodig.</steg>
+        </metode>
+        <kommentar>En herlig klassiker som aldri blir kjedelig. Perfekt både til frokost og dessert!</kommentar>
+        <innhold kalorier="320" fett="12" karbohydrater="45" proteiner="10"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Cesar salat</navn>
+        <vanskelighetsgrad>Lett</vanskelighetsgrad>
+        <tid>15 min</tid>
+        <porsjoner>2</porsjoner>
+        <ingredienser>
+            <ingrediens navn="romaine salat" mengde="1" enhet="stk"/>
+            <ingrediens navn="parmesan" mengde="50" enhet="g"/>
+            <ingrediens navn="croutons" mengde="100" enhet="g"/>
+            <ingrediens navn="caesar dressing" mengde="1" enhet="dl"/>
+            <ingrediens navn="ansjos" mengde="4" enhet="stk"/>
+            <ingrediens navn="sort pepper" mengde="1" enhet="ss"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Vask romaine salaten og kutt den i passende biter.</steg>
+            <steg id="2">Bland salaten med caesar dressing.</steg>
+            <steg id="3">Tilsett croutons, hakkede ansjos og pepper.</steg>
+            <steg id="4">Topp med revet parmesan og server straks.</steg>
+        </metode>
+        <kommentar>En klassisk italiensk salat som er både kjapp og deilig. Bruk fersk ingredienser for best resultat.</kommentar>
+        <innhold kalorier="380" fett="24" karbohydrater="28" proteiner="18"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Tuna smørbrød</navn>
+        <vanskelighetsgrad>Lett</vanskelighetsgrad>
+        <tid>10 min</tid>
+        <porsjoner>2</porsjoner>
+        <ingredienser>
+            <ingrediens navn="brød" mengde="2" enhet="skiver"/>
+            <ingrediens navn="tuna i oljeso" mengde="185" enhet="g"/>
+            <ingrediens navn="mayonnaise" mengde="2" enhet="ss"/>
+            <ingrediens navn="raud løk" mengde="0.5" enhet="stk"/>
+            <ingrediens navn="tomat" mengde="1" enhet="stk"/>
+            <ingrediens navn="salat" mengde="2" enhet="blad"/>
+            <ingrediens navn="sitron" mengde="0.5" enhet="stk"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Avløs tuna og bland den med mayonnaise og finmalt raud løk.</steg>
+            <steg id="2">Toast brødet og smør det godt.</steg>
+            <steg id="3">Legg på salatblader, tomat og tunablandingen.</steg>
+            <steg id="4">Server med et sprøyt sitron.</steg>
+        </metode>
+        <kommentar>En rask og lettlagd lunch som er fullpakket med protein. Perfekt pauselunch!</kommentar>
+        <innhold kalorier="420" fett="22" karbohydrater="32" proteiner="28"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Roasted paprika med mozzarella</navn>
+        <vanskelighetsgrad>Lett</vanskelighetsgrad>
+        <tid>25 min</tid>
+        <porsjoner>4</porsjoner>
+        <ingredienser>
+            <ingrediens navn="paprika" mengde="3" enhet="stk"/>
+            <ingrediens navn="mozzarella" mengde="200" enhet="g"/>
+            <ingrediens navn="hvitløk" mengde="2" enhet="fedd"/>
+            <ingrediens navn="olivenolje" mengde="3" enhet="ss"/>
+            <ingrediens navn="basilikum" mengde="8" enhet="blad"/>
+            <ingrediens navn="salt og pepper" mengde="1" enhet="ss"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Skjær paprika i store stykker og legg dem på et ildfast kar.</steg>
+            <steg id="2">Dryss over olivenolje, hakket hvitløk, salt og pepper.</steg>
+            <steg id="3">Rist på 200°C i cirka 20 minutter til paprikalene blir mørke.</steg>
+            <steg id="4">Legg mozzarella og frisk basilikum over varme paprika.</steg>
+            <steg id="5">Server lunkent med godt brød.</steg>
+        </metode>
+        <kommentar>En elegant og lett forrett som smager herlig. Bruk kvalitets mozzarella for best resultat.</kommentar>
+        <innhold kalorier="280" fett="18" karbohydrater="18" proteiner="14"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Muslingsuppe</navn>
+        <vanskelighetsgrad>Middels</vanskelighetsgrad>
+        <tid>30 min</tid>
+        <porsjoner>4</porsjoner>
+        <ingredienser>
+            <ingrediens navn="muslinger" mengde="800" enhet="g"/>
+            <ingrediens navn="løk" mengde="1" enhet="stk"/>
+            <ingrediens navn="hvitløk" mengde="3" enhet="fedd"/>
+            <ingrediens navn="hvit vin" mengde="2" enhet="dl"/>
+            <ingrediens navn="fløte" mengde="2" enhet="dl"/>
+            <ingrediens navn="fish stock" mengde="4" enhet="dl"/>
+            <ingrediens navn="butter" mengde="30" enhet="g"/>
+            <ingrediens navn="persiljan" mengde="1" enhet="bunt"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Smelt butter og stekt finmalt løk og hvitløk til det blir duftende.</steg>
+            <steg id="2">Skjell og rens muslingene under kaldt vann.</steg>
+            <steg id="3">Tilsett vin og la muslingene koke til de åpner seg, cirka 5 minutter.</steg>
+            <steg id="4">Tilsett fish stock og fløte. Kok i 10 minutter.</steg>
+            <steg id="5">Smak til med salt og pepper. Pynt med frisk persiljan før servering.</steg>
+        </metode>
+        <kommentar>En herlig og elegant forrett som smager av sjøen. Friske muslinger er nøkkelen!</kommentar>
+        <innhold kalorier="350" fett="18" karbohydrater="12" proteiner="32"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Laks med asparges</navn>
+        <vanskelighetsgrad>Middels</vanskelighetsgrad>
+        <tid>25 min</tid>
+        <porsjoner>2</porsjoner>
+        <ingredienser>
+            <ingrediens navn="laksebiff" mengde="200" enhet="g"/>
+            <ingrediens navn="asparges" mengde="300" enhet="g"/>
+            <ingrediens navn="butter" mengde="30" enhet="g"/>
+            <ingrediens navn="sitron" mengde="1" enhet="stk"/>
+            <ingrediens navn="hvitløk" mengde="1" enhet="fedd"/>
+            <ingrediens navn="dill" mengde="5" enhet="g"/>
+            <ingrediens navn="salt og pepper" mengde="1" enhet="ss"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Varmeovnen til 200°C og skjer aspargesene.</steg>
+            <steg id="2">Legg asparges på et bakeark, dryss med olivenolje og rist 10 minutter.</steg>
+            <steg id="3">Legg laksebiffene på aspargesene, dryss med smelte butter og hakket hvitløk.</steg>
+            <steg id="4">Rist sammen i 12-15 minutter til laksen er gjennom stekt.</steg>
+            <steg id="5">Strø over frisk dill og server med sitron.</steg>
+        </metode>
+        <kommentar>En enkel men elegant middag som er både heltesund og deilig. Perfekt for festlig middag!</kommentar>
+        <innhold kalorier="520" fett="32" karbohydrater="8" proteiner="52"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Kjøttkaker med brunsaus</navn>
+        <vanskelighetsgrad>Middels</vanskelighetsgrad>
+        <tid>40 min</tid>
+        <porsjoner>4</porsjoner>
+        <ingredienser>
+            <ingrediens navn="kjøttdeig" mengde="500" enhet="g"/>
+            <ingrediens navn="egg" mengde="1" enhet="stk"/>
+            <ingrediens navn="brødkrummer" mengde="50" enhet="g"/>
+            <ingrediens navn="løk" mengde="1" enhet="stk"/>
+            <ingrediens navn="salt og pepper" mengde="1" enhet="ss"/>
+            <ingrediens navn="butter" mengde="50" enhet="g"/>
+            <ingrediens navn="melk" mengde="2" enhet="dl"/>
+            <ingrediens navn="mel" mengde="2" enhet="ss"/>
+            <ingrediens navn="kraft" mengde="3" enhet="dl"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Bland kjøttdeig med finmalt løk, egg, brødkrummer, salt og pepper.</steg>
+            <steg id="2">Form 12 kjøttkaker og stekt dem på butter til de er brune.</steg>
+            <steg id="3">Fjern kjøttkakene og lag brunsaus av kjøttstekingen.</steg>
+            <steg id="4">Melange mel i smelte butter, tilsett kraft og melk, kok 5 minutter.</steg>
+            <steg id="5">Legg kjøttkakene tilbake i sausen og server med potet.</steg>
+        </metode>
+        <kommentar>En norsk klassiker som aldri blir kjedelig. Server med poteter og rødbeter!</kommentar>
+        <innhold kalorier="580" fett="28" karbohydrater="35" proteiner="38"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Pasta Carbonara</navn>
+        <vanskelighetsgrad>Lett</vanskelighetsgrad>
+        <tid>20 min</tid>
+        <porsjoner>4</porsjoner>
+        <ingredienser>
+            <ingrediens navn="spaghetti" mengde="400" enhet="g"/>
+            <ingrediens navn="pancetta eller bacon" mengde="150" enhet="g"/>
+            <ingrediens navn="egg" mengde="3" enhet="stk"/>
+            <ingrediens navn="parmesan" mengde="100" enhet="g"/>
+            <ingrediens navn="sort pepper" mengde="1" enhet="ts"/>
+            <ingrediens navn="salt" mengde="1" enhet="ss"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Kok pasta i saltet vann etter paknings anvisning.</steg>
+            <steg id="2">Stekt bacon til det er sprøtt, og skjær det i småbiter.</steg>
+            <steg id="3">Visp sammen egg, revet parmesan og malt pepper.</steg>
+            <steg id="4">Bland varmt pasta med bacon og dets fett.</steg>
+            <steg id="5">Tilsett egg-blandingen raskt mens pastaen er varm, og rør forsiktig. Smak til.</steg>
+        </metode>
+        <kommentar>En italiensk favoritt som er rask og deilig. Bruk best ingredienser for autentisk smak!</kommentar>
+        <innhold kalorier="650" fett="32" karbohydrater="55" proteiner="35"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Fiskegryte</navn>
+        <vanskelighetsgrad>Middels</vanskelighetsgrad>
+        <tid>45 min</tid>
+        <porsjoner>6</porsjoner>
+        <ingredienser>
+            <ingrediens navn="hvit fisk" mengde="600" enhet="g"/>
+            <ingrediens navn="muslinger" mengde="300" enhet="g"/>
+            <ingrediens navn="reker" mengde="200" enhet="g"/>
+            <ingrediens navn="løk" mengde="2" enhet="stk"/>
+            <ingrediens navn="hvitløk" mengde="3" enhet="fedd"/>
+            <ingrediens navn="tomat" mengde="4" enhet="stk"/>
+            <ingrediens navn="fish stock" mengde="8" enhet="dl"/>
+            <ingrediens navn="safran" mengde="1" enhet="priserve"/>
+            <ingrediens navn="olivenolje" mengde="3" enhet="ss"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Stekt løk og hvitløk i olivenolje til det blir duftende.</steg>
+            <steg id="2">Tilsett krossede tomater og kok 5 minutter.</steg>
+            <steg id="3">Tilsett fish stock og safran, kok 10 minutter.</steg>
+            <steg id="4">Tilsett fisk, muslinger og reker. Kok til alt er gjennomstekt, cirka 10 minutter.</steg>
+            <steg id="5">Smak til med salt og pepper. Server med brød og aioli.</steg>
+        </metode>
+        <kommentar>En spektakulær og elegansfullt fiskerett som imponerer gjester. Bruk ferskt fisk fra dagen!</kommentar>
+        <innhold kalorier="420" fett="14" karbohydrater="18" proteiner="52"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Sjokolademousse</navn>
+        <vanskelighetsgrad>Lett</vanskelighetsgrad>
+        <tid>15 min</tid>
+        <porsjoner>4</porsjoner>
+        <ingredienser>
+            <ingrediens navn="mørk sjokolade" mengde="200" enhet="g"/>
+            <ingrediens navn="fløte" mengde="4" enhet="dl"/>
+            <ingrediens navn="egg" mengde="2" enhet="stk"/>
+            <ingrediens navn="sukker" mengde="30" enhet="g"/>
+            <ingrediens navn="kakao" mengde="1" enhet="ss"/>
+            <ingrediens navn="kaffe" mengde="1" enhet="dl"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Smelt sjokoladen i en bolle over varmtvann med kaffen.</steg>
+            <steg id="2">Visp egg og sukker til det er lett og luftig.</steg>
+            <steg id="3">Visp fløten til stiv frisk og bland forsiktig med eggblandingen.</steg>
+            <steg id="4">Bland den smeltede sjokoladen inn i fløteblandingen.</steg>
+            <steg id="5">Fordel i glass og kjøl minst 2 timer. Pynt med kakao før servering.</steg>
+        </metode>
+        <kommentar>En silk og luksus dessert som er enkel å lage. Perfekt til festlige anledninger!</kommentar>
+        <innhold kalorier="480" fett="35" karbohydrater="38" proteiner="8"/>
+    </oppskrift>
+    <oppskrift>
+        <navn>Jordbær pavlova</navn>
+        <vanskelighetsgrad>Middels</vanskelighetsgrad>
+        <tid>60 min</tid>
+        <porsjoner>6</porsjoner>
+        <ingredienser>
+            <ingrediens navn="egg hvite" mengde="3" enhet="stk"/>
+            <ingrediens navn="sukker" mengde="150" enhet="g"/>
+            <ingrediens navn="hvit eddik" mengde="1" enhet="ss"/>
+            <ingrediens navn="maizena" mengde="1" enhet="ss"/>
+            <ingrediens navn="fløte" mengde="4" enhet="dl"/>
+            <ingrediens navn="jordbær" mengde="500" enhet="g"/>
+            <ingrediens navn="sukker til jordbær" mengde="2" enhet="ss"/>
+        </ingredienser>
+        <metode>
+            <steg id="1">Visp egg hvite til stiv frisk og tilsett sukker litt og litt.</steg>
+            <steg id="2">Bland i hvit eddik og maizena.</steg>
+            <steg id="3">Legg på et bakeark med silikon og form til en stor pavlova.</steg>
+            <steg id="4">Rist på 100°C i cirka 45 minutter til den blir tørr.</steg>
+            <steg id="5">La den kjøle og visp fløten. Topp pavlova med fløte og ferskje jordbær.</steg>
+        </metode>
+        <kommentar>En lette og elegant dessert som aldri blir foreldet. Gjør jordbærene søte og myke for best resultat.</kommentar>
+        <innhold kalorier="350" fett="16" karbohydrater="42" proteiner="4"/>
+    </oppskrift>
+</oppskrifter>

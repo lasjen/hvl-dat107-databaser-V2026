@@ -7,8 +7,8 @@
         <html>
             <head>
                 <title>Personliste</title>
-                <!-- <link rel="stylesheet" type="text/css" href="css/screen.css"/> -->
-                <!-- <link rel="stylesheet" href="css/print.css" media="print" /> -->
+                <link rel="stylesheet" type="text/css" href="css/screen.css"/>
+                <link rel="stylesheet" href="css/print.css" media="print" />
             </head>
             <body>
                 <xsl:apply-templates select="//person"/>
@@ -23,6 +23,9 @@
             <xsl:text> </xsl:text>
             <xsl:value-of select="etternavn"/> </p>
         Fødselsdato: <xsl:value-of select="fodselsdato"/><br />
+        <xsl:if test="barn &gt; 0">
+            Barn: <xsl:value-of select="barn"/><br />
+        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>

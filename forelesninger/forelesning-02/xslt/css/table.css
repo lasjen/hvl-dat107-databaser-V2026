@@ -1,0 +1,69 @@
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+table tr:first-child {
+    background-color: #FFD700;
+    font-weight: bold;
+    color: #333;
+}
+
+table tr:first-child td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #999;
+}
+
+/* Table Data Cells */
+table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Alternating row colors for better readability */
+table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Hover effect on rows */
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Print styling */
+@media print {
+    table {
+        page-break-inside: avoid;
+    }
+
+    table tr {
+        page-break-inside: avoid;
+    }
+
+    table {
+        box-shadow: none;
+    }
+}
+
+/* Body and heading styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+    border-bottom: 3px solid #FFD700;
+    padding-bottom: 10px;
+}

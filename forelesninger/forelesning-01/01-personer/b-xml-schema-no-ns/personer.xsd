@@ -4,7 +4,7 @@
 
 <!-- Type Definisjoner - Simple -->
   <xs:simpleType name="pnrType">
-    <xs:restriction base="xs:int">
+    <xs:restriction base="xs:integer">
       <xs:minExclusive value="0"/>
     </xs:restriction>
   </xs:simpleType>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="personer-xsl-example.xsl"?>
-<!-- <?xml-stylesheet href="screen.css" type="text/css" media="screen"?> -->
-<!-- <?xml-stylesheet href="print.css"  type="text/css" media="print"?> -->
+<!-- <?xml-stylesheet href="css/screen.css" type="text/css" media="screen"?> -->
+<!-- <?xml-stylesheet href="css/print.css"  type="text/css" media="print"?> -->
 
 <personer>
     <person>

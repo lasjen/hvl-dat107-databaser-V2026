@@ -40,7 +40,7 @@
          <xs:element name="medlem" type="xs:boolean"/>
          <xs:element name="poeng" type="PoengType"/>
          <xs:element name="hjemmeside" type="xs:anyURI"/>
-         <xs:element name="puljeId" type="xs:string"/>
+         <xs:element name="puljeId" type="xs:integer"/>
          <xs:element name="foresattId" type="xs:IDREF" minOccurs="0"/>
       </xs:sequence>
    </xs:complexType>

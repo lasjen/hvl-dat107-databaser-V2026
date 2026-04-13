@@ -12,11 +12,11 @@
     <email>enkel@example.com</email>
   </person>
 
-  <person pnr="1">
+  <person pnr="2">
     <fornavn>Kari</fornavn>
     <etternavn>Svenske</etternavn>
     <fodselsdato>1993-08-23</fodselsdato>
-    <email>enkel@example.com</email>
+    <email>enkel2@example.com</email>
   </person>
 
 </personer>

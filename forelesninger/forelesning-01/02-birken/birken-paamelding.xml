@@ -27,16 +27,15 @@
 
    <person>
       <!-- Foresatt -->
-      <id>h0001</id>
+      <id>h0002</id>
       <navn>Ola Hansen</navn>
-      <fdato>1975-03-00</fdato>
+      <fdato>1975-03-01</fdato>
+      <fnr>02121250685</fnr>
       <medlem>true</medlem>
-      <poeng>4405.21</poeng>
-      <hjemmeside>Kan være hva som helst</hjemmeside>
-      <!-- <hjemmeside>https://www.olahansen.no</hjemmeside> -->
-      <pulje>1</pulje>
-      <starttid>2026-03-15</starttid>
-      <!-- <starttid>2026-03-15T07:30:00</starttid> -->
+      <poeng>2405.21</poeng>
+      <hjemmeside>https://www.olahansen.no</hjemmeside>
+      <puljeId>5</puljeId>
+      <foresattId>h0001</foresattId>
    </person>
 
    <!-- Barn under 16 år -->

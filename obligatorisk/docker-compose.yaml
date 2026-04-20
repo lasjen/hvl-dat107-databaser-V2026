@@ -1,0 +1,32 @@
+services:
+  dat107-oblig-postgres:
+    image: postgres:15-alpine
+    container_name: dat107-oblig-postgres
+    environment:
+      POSTGRES_DB: dat107_db
+      POSTGRES_USER: dat107
+      POSTGRES_PASSWORD: dat107
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./skript/create-postgres-db.sql:/docker-entrypoint-initdb.d/create-postgres-db.sql:ro
+    networks:
+      - oblig-network
+
+  dat107-oblig-mongodb:
+    image: mongodb/mongodb-community-server:latest
+    container_name: dat107-oblig-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-data:/data/db
+      - ./skript/create-mongo-db.js:/docker-entrypoint-initdb.d/create-mongo-db.js:ro
+    environment:
+      - MONGO_INITDB_DATABASE=hvl-oblig
+    networks:
+      - oblig-network
+
+networks:
+  oblig-network:
+    driver: bridge

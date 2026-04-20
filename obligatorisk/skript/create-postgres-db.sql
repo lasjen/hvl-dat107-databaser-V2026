@@ -177,6 +177,11 @@ INSERT INTO medlemsavgift (medlemsnummer, ar, betalt, betalingsdato)
 SELECT medlemsnummer, 2026, 'N', NULL
 FROM medlem;
 
+-- 2 medlemmer har betalt for 2026
+UPDATE medlemsavgift
+SET betalt = 'J', betalingsdato = CURRENT_DATE + (medlemsnummer - 1000) * INTERVAL '1 day'
+WHERE ar = 2026 AND medlemsnummer IN (1001, 1002);
+
 commit;
 -- ------------------------------------------------------------
 -- Verify data

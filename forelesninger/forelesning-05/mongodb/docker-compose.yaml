@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:latest
+    container_name: dat107-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-data:/data/db
+      - ./create-demo-data.js:/docker-entrypoint-initdb.d/create-demo-data.js:ro
+    environment:
+      - MONGO_INITDB_DATABASE=birken

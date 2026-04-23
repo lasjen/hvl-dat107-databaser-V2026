@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    line-height: 1.7;
+    color: #333;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.oppskrifter-oversikt {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.oppskrifter-oversikt h2 {
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.oppskrifter-liste {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.oppskrifter-liste li {
+    margin: 0;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.oppskrifter-liste li:hover {
+    background: #ecf0f1;
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.oppskrifter-liste a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+.oppskrifter-liste a:hover {
+    color: #3498db;
+}
+
+.oppskrift-detalj {
+    background: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #3498db;
+    transition: box-shadow 0.3s ease;
+}
+
+.oppskrift-detalj:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.oppskrift-detalj h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.oppskrift-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ecf0f1 0%, #f8f9fa 100%);
+    border-radius: 8px;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #7f8c8d;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+h4 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 28px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.ingredienser-liste {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredienser-liste li {
+    padding: 12px 15px;
+    margin: 8px 0;
+    background: #f8f9fa;
+    border-left: 4px solid #27ae60;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.ingredienser-liste li:hover {
+    background: #ecf0f1;
+    transform: translateX(3px);
+}
+
+.ingrediens-mengde {
+    font-weight: 700;
+    color: #27ae60;
+}
+
+.metode-liste {
+    list-style: none;
+    padding: 0;
+    counter-reset: steg-counter;
+}
+
+.metode-liste li {
+    padding: 15px 18px;
+    margin: 12px 0;
+    background: #f8f9fa;
+    border-left: 4px solid #e74c3c;
+    border-radius: 6px;
+    counter-increment: steg-counter;
+    transition: all 0.2s ease;
+}
+
+.metode-liste li:hover {
+    background: #ecf0f1;
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.metode-liste li:before {
+    content: "Steg " counter(steg-counter) ": ";
+    font-weight: 700;
+    color: #e74c3c;
+    margin-right: 8px;
+}
+
+.kommentar {
+    padding: 15px 18px;
+    background-color: #fef5e7;
+    border-left: 4px solid #f39c12;
+    border-radius: 6px;
+    font-style: italic;
+    margin: 20px 0;
+    color: #7d6608;
+}
+
+.innhold {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #d1e7f5 0%, #ecf0f1 100%);
+    border-radius: 8px;
+}
+
+.innhold-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.innhold-label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.innhold-verdi {
+    font-size: 1.5em;
+    color: #2980b9;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.tilbake-link {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ecf0f1;
+}
+
+.tilbake-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.tilbake-link a:hover {
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+

@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+}
+
+.header {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-bottom: 3px solid #0066cc;
+}
+
+.header h1 {
+    margin: 0;
+    color: #0066cc;
+}
+
+.oppskrifter-oversikt {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.oppskrifter-oversikt h2 {
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+}
+
+.oppskrifter-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.oppskrifter-liste li {
+    margin: 0;
+}
+
+.oppskrifter-liste a {
+    display: block;
+    padding: 10px;
+    background: #f0f0f0;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.oppskrifter-liste a:hover {
+    background: #e0e0e0;
+}
+
+.oppskrift-detalj {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #0066cc;
+}
+
+.oppskrift-detalj h3 {
+    margin: 0 0 15px 0;
+    color: #0066cc;
+}
+
+.oppskrift-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 3px;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-label {
+    font-weight: bold;
+    font-size: 12px;
+    color: #666;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #333;
+}
+
+h4 {
+    margin: 20px 0 10px 0;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.ingredienser-liste,
+.metode-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.ingredienser-liste li,
+.metode-liste li {
+    padding: 8px 10px;
+    margin: 5px 0;
+    background: #f9f9f9;
+    border-left: 3px solid #0066cc;
+}
+
+.ingrediens-mengde {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.metode-liste li {
+    counter-increment: step-counter;
+}
+
+.metode-liste {
+    counter-reset: step-counter;
+}
+
+.metode-liste li:before {
+    content: counter(step-counter) ". ";
+    font-weight: bold;
+    color: #0066cc;
+}
+
+.kommentar {
+    padding: 10px;
+    background: #fff9e6;
+    border-left: 3px solid #ff9900;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.innhold {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.innhold-item {
+    background: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.innhold-label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #666;
+}
+
+.innhold-verdi {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0066cc;
+    margin-top: 5px;
+}
+
+.tilbake-link {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.tilbake-link a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tilbake-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .oppskrift-info,
+    .innhold {
+        grid-template-columns: 1fr;
+    }
+}
+
+

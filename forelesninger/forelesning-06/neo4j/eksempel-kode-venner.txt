@@ -1,0 +1,211 @@
+// eksempel-spørringer-venner.cypher
+// Eksempelspørringer for venner-nettverket (seed-venner.cypher)
+
+// ============================================================
+// GRUNNLEGGENDE SPØRRINGER
+// ============================================================
+
+// Vis alle personer
+MATCH (p:Person) 
+RETURN p.brukernavn, p.fornavn, p.etternavn, p.by
+ORDER BY p.fornavn;
+
+// Vis alle vennskap
+MATCH (p1:Person)-[:VENNER]->(p2:Person)
+RETURN p1.fornavn + ' ' + p1.etternavn AS person1,
+       p2.fornavn + ' ' + p2.etternavn AS person2;
+
+// Tell totalt antall personer
+MATCH (p:Person)
+RETURN count(p) AS antall_personer;
+
+// Tell totalt antall vennskap
+MATCH ()-[r:VENNER]->()
+RETURN count(r) AS antall_vennskap;
+
+
+// ============================================================
+// FINN VENNER
+// ============================================================
+
+// Finn alle venner til Ola
+MATCH (p:Person {fornavn: "Ola"})-[:VENNER]->(venn:Person)
+RETURN venn.fornavn, venn.etternavn, venn.by;
+
+// Finn alle venner til en person via brukernavn
+MATCH (p:Person {brukernavn: "olano"})-[:VENNER]->(venn:Person)
+RETURN venn.brukernavn, venn.fornavn, venn.etternavn;
+
+// Finn både utgående og innkommende vennskap for Ola
+MATCH (p:Person {fornavn: "Ola"})-[:VENNER]-(venn:Person)
+RETURN DISTINCT venn.fornavn, venn.etternavn, venn.by;
+
+
+// ============================================================
+// SØKE ETTER BY
+// ============================================================
+
+// Finn alle personer fra Bergen
+MATCH (p:Person {by: "Bergen"})
+RETURN p.brukernavn, p.fornavn, p.etternavn
+ORDER BY p.fornavn;
+
+// Tell personer per by
+MATCH (p:Person)
+RETURN p.by AS by, count(p) AS antall_personer
+ORDER BY antall_personer DESC;
+
+// Finn vennskap mellom personer fra samme by
+MATCH (p1:Person)-[:VENNER]->(p2:Person)
+WHERE p1.by = p2.by
+RETURN p1.by AS by, 
+       p1.fornavn + ' ' + p1.etternavn AS person1,
+       p2.fornavn + ' ' + p2.etternavn AS person2;
+
+
+// ============================================================
+// STATISTIKK
+// ============================================================
+
+// Finn hvem som har flest venner
+MATCH (p:Person)-[:VENNER]->(venn:Person)
+RETURN p.fornavn + ' ' + p.etternavn AS person, 
+       p.by AS by,
+       count(venn) AS antall_venner
+ORDER BY antall_venner DESC;
+
+// Finn gjennomsnittlig antall venner
+MATCH (p:Person)
+OPTIONAL MATCH (p)-[:VENNER]->(venn:Person)
+WITH p, count(venn) AS antall_venner
+RETURN avg(antall_venner) AS gjennomsnitt_venner;
+
+// Finn personer uten venner
+MATCH (p:Person)
+WHERE NOT exists((p)-[:VENNER]->(:Person))
+RETURN p.fornavn, p.etternavn, p.by;
+
+// Finn personer med mer enn 3 venner
+MATCH (p:Person)-[:VENNER]->(venn:Person)
+WITH p, count(venn) AS antall_venner
+WHERE antall_venner > 3
+RETURN p.fornavn, p.etternavn, antall_venner
+ORDER BY antall_venner DESC;
+
+
+// ============================================================
+// FELLES VENNER
+// ============================================================
+
+// Finn felles venner mellom Ola og Kari
+MATCH (ola:Person {fornavn: "Ola"})-[:VENNER]->(felles:Person)<-[:VENNER]-(kari:Person {fornavn: "Kari"})
+RETURN felles.fornavn, felles.etternavn;
+
+// Finn alle par som har felles venner
+MATCH (p1:Person)-[:VENNER]->(felles:Person)<-[:VENNER]-(p2:Person)
+WHERE id(p1) < id(p2)
+RETURN p1.fornavn + ' ' + p1.etternavn AS person1,
+       p2.fornavn + ' ' + p2.etternavn AS person2,
+       collect(felles.fornavn + ' ' + felles.etternavn) AS felles_venner;
+
+// Tell hvor mange felles venner to personer har
+MATCH (p1:Person {fornavn: "Ola"})-[:VENNER]->(felles:Person)<-[:VENNER]-(p2:Person)
+WHERE p1 <> p2
+RETURN p2.fornavn + ' ' + p2.etternavn AS person,
+       count(felles) AS antall_felles_venner
+ORDER BY antall_felles_venner DESC;
+
+
+// ============================================================
+// VENN-AV-VENN (2. GRAD)
+// ============================================================
+
+// Finn venn-av-venn til Ola (potensielle nye venner)
+MATCH (ola:Person {fornavn: "Ola"})-[:VENNER]->(:Person)-[:VENNER]->(vennAvVenn:Person)
+WHERE ola <> vennAvVenn 
+  AND NOT exists((ola)-[:VENNER]->(vennAvVenn))
+RETURN DISTINCT vennAvVenn.fornavn, vennAvVenn.etternavn, vennAvVenn.by;
+
+// Finn korteste sti mellom to personer
+MATCH path = shortestPath(
+  (p1:Person {fornavn: "Ola"})-[:VENNER*]-(p2:Person {fornavn: "Daniel"})
+)
+RETURN length(path) AS avstand, 
+       [node in nodes(path) | node.fornavn] AS sti;
+
+// Finn alle innenfor 2 hops fra Ola
+MATCH (ola:Person {fornavn: "Ola"})-[:VENNER*1..2]-(andre:Person)
+WHERE ola <> andre
+RETURN DISTINCT andre.fornavn, andre.etternavn, andre.by;
+
+
+// ============================================================
+// NETTVERK-ANALYSE
+// ============================================================
+
+// Finn mest "sentrale" personer (flest totale forbindelser)
+MATCH (p:Person)-[:VENNER*1..2]-(andre:Person)
+WHERE p <> andre
+RETURN p.fornavn + ' ' + p.etternavn AS person,
+       count(DISTINCT andre) AS nettverksstørrelse
+ORDER BY nettverksstørrelse DESC
+LIMIT 10;
+
+// Finn personer som binder nettverket sammen (har venner i flere byer)
+MATCH (p:Person)-[:VENNER]->(venn:Person)
+WITH p, collect(DISTINCT venn.by) AS byer
+WHERE size(byer) > 1
+RETURN p.fornavn, p.etternavn, p.by, byer AS venner_fra_byer, size(byer) AS antall_byer
+ORDER BY antall_byer DESC;
+
+// Finn klynger av personer fra samme by
+MATCH (p1:Person {by: "Bergen"})-[:VENNER*1..2]-(p2:Person {by: "Bergen"})
+WHERE p1 <> p2
+RETURN p1.fornavn, 
+       collect(DISTINCT p2.fornavn) AS bergen_nettverk,
+       size(collect(DISTINCT p2.fornavn)) AS nettverksstørrelse
+ORDER BY nettverksstørrelse DESC
+LIMIT 5;
+
+
+// ============================================================
+// ANBEFALINGER
+// ============================================================
+
+// Anbefal nye venner til Ola basert på felles venner
+MATCH (ola:Person {fornavn: "Ola"})-[:VENNER]->(:Person)-[:VENNER]->(anbefaling:Person)
+WHERE ola <> anbefaling 
+  AND NOT exists((ola)-[:VENNER]->(anbefaling))
+WITH ola, anbefaling, count(*) AS felles_venner
+RETURN anbefaling.fornavn + ' ' + anbefaling.etternavn AS anbefalt_venn,
+       anbefaling.by AS by,
+       felles_venner
+ORDER BY felles_venner DESC
+LIMIT 5;
+
+// Anbefal venner fra samme by
+MATCH (ola:Person {fornavn: "Ola"}), (anbefaling:Person)
+WHERE ola.by = anbefaling.by 
+  AND ola <> anbefaling
+  AND NOT exists((ola)-[:VENNER]->(anbefaling))
+RETURN anbefaling.fornavn, anbefaling.etternavn, anbefaling.brukernavn
+LIMIT 5;
+
+
+// ============================================================
+// VISUALISERING
+// ============================================================
+
+// Vis hele nettverket (begrenset til 50 noder)
+MATCH (p:Person)-[r:VENNER]->(venn:Person)
+RETURN p, r, venn
+LIMIT 50;
+
+// Vis nettverk rundt en spesifikk person (Ola + venner + venner-av-venner)
+MATCH path = (ola:Person {fornavn: "Ola"})-[:VENNER*1..2]-(andre:Person)
+RETURN path;
+
+// Vis kun Bergen-nettverket
+MATCH (p1:Person {by: "Bergen"})-[r:VENNER]->(p2:Person {by: "Bergen"})
+RETURN p1, r, p2;
+

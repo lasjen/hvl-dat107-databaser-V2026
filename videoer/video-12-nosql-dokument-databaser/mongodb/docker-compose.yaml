@@ -1,0 +1,34 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      # Disable authentication for development
+      MONGO_INITDB_DATABASE: hvl_db
+    volumes:
+      # Persist data
+      - mongodb_data:/data/db
+      # Persist MongoDB config
+      - mongodb_config:/data/configdb
+    networks:
+      - mongodb_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  mongodb_data:
+    driver: local
+  mongodb_config:
+    driver: local
+
+networks:
+  mongodb_network:
+    driver: bridge
+

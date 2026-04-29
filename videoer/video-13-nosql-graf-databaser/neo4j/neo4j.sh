@@ -1,0 +1,1 @@
+docker exec -it neo4j cypher-shell -a neo4j://localhost:7687

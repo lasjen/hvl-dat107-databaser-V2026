@@ -1,0 +1,33 @@
+{
+  "ordrer": [
+    {
+      "ordreId": 10012,
+      "kunde": {
+        "kundeId": 1001,
+        "kundeNavn": "Ola Nordmann",
+        "epost": "ola.nordmann@gmail.com",
+        "postAdresse": {
+          "adresse": "Enebakkveien 12",
+          "postnr": "1205",
+          "poststed": "Enebakk"
+        }
+      },
+      "varer": [
+        {
+          "vareId": 100201,
+          "vareNavn": "Helsport Fjellheimen 3 Pro",
+          "antall": 1,
+          "pris": 9000,
+          "rabattKode": "VIP"
+        },
+        {
+          "vareId": 100202,
+          "vareNavn": "JetBoil Mini",
+          "antall": 1,
+          "pris": 1200
+        }
+      ]
+    }
+  ]
+}
+

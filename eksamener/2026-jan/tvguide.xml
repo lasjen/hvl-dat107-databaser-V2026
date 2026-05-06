@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tvguide>
+  <program id="1" kanal="TV2" dato="2025-12-09" tid="20:00">
+    <tittel>Farmen</tittel>
+    <kategori>Reality</kategori>
+    <beskrivelse>Deltakerne kjemper om å vinne Farmen.</beskrivelse>
+  </program>
+  <program id="2" kanal="TV2" dato="2025-12-09" tid="21:00">
+    <tittel>Nyhetene</tittel>
+    <kategori>Nyheter</kategori>
+    <beskrivelse>Siste nytt fra inn- og utland.</beskrivelse>
+  </program>
+  <program id="3" kanal="TV2 Sport" dato="2025-12-09" tid="18:30">
+    <tittel>Fotball: Premier League</tittel>
+    <kategori>Sport</kategori>
+    <beskrivelse>Direktekamp fra Premier League.</beskrivelse>
+  </program>
+  <program id="4" kanal="TV2 Zebra" dato="2025-12-09" tid="22:00">
+    <tittel>Criminal Minds</tittel>
+    <kategori>Krim</kategori>
+    <beskrivelse>Etterforskning av seriemordere.</beskrivelse>
+    <reprise/>
+  </program>
+</tvguide>

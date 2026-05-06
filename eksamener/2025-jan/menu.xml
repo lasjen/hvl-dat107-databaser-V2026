@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns="http://eksamen.hvl.no/dat107"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://eksamen.hvl.no/dat107 menu.xsd">
+    <starters>
+        <starter name="Garlic Bread">
+            <description>Garlic bread with cheese</description>
+            <price>100.00</price>
+        </starter>
+        <starter name="Shrimp coctail">
+            <description>Shrimp cocktail with avocado</description>
+            <price>150.00</price>
+        </starter>
+    </starters>
+    <mainCourses>
+        <mainCourse name="Beef steak">
+            <description>Beef steak with pepper sauce</description>
+            <price>250.00</price>
+            <allergens>
+                <allergen>Gluten</allergen>
+                <allergen>Laktose</allergen>
+            </allergens>
+        </mainCourse>
+        <mainCourse name="Blab la bla">
+            <description>Blaribla</description>
+            <price>179.00</price>
+        </mainCourse>
+    </mainCourses>
+    <desserts>
+        <dessert name="Chocolate cake">
+            <description>Chocolate cake with ice cream</description>
+            <price>100.00</price>
+        </dessert>
+        <dessert name="Cheese cake">
+            <description>Cheese cake duddli du</description>
+            <price>110.00</price>
+        </dessert>
+    </desserts>
+</menu>

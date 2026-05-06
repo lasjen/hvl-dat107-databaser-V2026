@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Ordrer xmlns="http://eksamen.hvl.no/databaser"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://eksamen.hvl.no/databaser kunde-ordre.xsd">
+
+   <Ordre OrdreId="10012">
+      <Kunde KundeId="1001">
+         <KundeNavn>Ola Nordmann</KundeNavn>
+         <Epost>ola.nordmann@gmail.com</Epost>
+         <PostAdresse>
+            <Adresse>Enebakkveien 12</Adresse>
+            <Postnr>1205</Postnr>
+            <Poststed>Enebakk</Poststed>
+         </PostAdresse>
+      </Kunde>
+      <Varer>
+         <Vare VareId="100201">
+            <VareNavn>Helsport Fjellheimen 3 Pro</VareNavn>
+            <Antall>1</Antall>
+            <Pris>9000</Pris>
+            <RabattKode>VIP</RabattKode>
+         </Vare>
+         <Vare VareId="100202">
+            <VareNavn>JetBoil Mini</VareNavn>
+            <Antall>1</Antall>
+            <Pris>1200</Pris>
+         </Vare>
+      </Varer>
+   </Ordre>
+</Ordrer>

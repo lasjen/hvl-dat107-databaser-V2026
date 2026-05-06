@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biler>
+   <bil regnr="XK12345" produksjonsår="2016">
+      <merke>Honda</merke>
+      <model>Civik</model>
+      <klasse>sedan</klasse>
+      <detaljer>
+         <seter>2</seter>
+         <motor hestekrefter="100" drift="FWD" ccm3="2000"/>
+      </detaljer>
+      <utstyr>
+         <alarm/><keyless/><cruise-kontroll type="adaptiv"/>
+      </utstyr>
+   </bil>
+   <bil regnr="ZZ22233" produksjonsår="2020">
+      <merke>Toyota</merke>
+      <model>Land Cruiser</model>
+      <klasse>SUV</klasse>
+      <detaljer>
+         <seter>2</seter>
+         <motor hestekrefter="280" drift="AWD" ccm3="3000"/>
+      </detaljer>
+      <utstyr>
+         <keyless/><cruise-kontroll type="manuell"/><ABS/>
+      </utstyr>
+   </bil>
+   <bil regnr="FP89959" produksjonsår="1989">
+      <merke>Porsche</merke>
+      <model>959</model>
+      <klasse>sportsbil</klasse>
+      <detaljer>
+         <seter>4</seter>
+         <motor hestekrefter="530" drift="AWD" ccm3="2850"/>
+      </detaljer>
+      <utstyr>
+         <alarm/><cruise-kontroll type="manuell"/><turbo/>
+      </utstyr>
+   </bil>
+</biler>

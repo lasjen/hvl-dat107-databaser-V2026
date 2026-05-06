@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="http://eksamen.hvl.no/dat107"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="menu" type="menuType"/>
+
+   <xs:complexType name="menuType">
+      <xs:sequence>
+         <xs:element name="starters" type="startersType" maxOccurs="1"/>
+         <xs:element name="mainCourses" type="mainCoursesType" maxOccurs="1"/>
+         <xs:element name="desserts" type="dessertsType" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="startersType">
+      <xs:sequence>
+         <xs:element name="starter" type="starterType" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="mainCoursesType">
+      <xs:sequence>
+         <xs:element name="mainCourse" type="mainCourseType" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="dessertsType">
+      <xs:sequence>
+         <xs:element name="dessert" type="dessertType" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="starterType">
+      <xs:sequence>
+         <xs:element name="description" type="xs:string"/>
+         <xs:element name="price" type="xs:decimal"/>
+         <xs:element name="allergens" type="allergensType" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+   </xs:complexType>
+
+   <xs:complexType name="mainCourseType">
+      <xs:sequence>
+         <xs:element name="description" type="xs:string"/>
+         <xs:element name="price" type="xs:decimal"/>
+         <xs:element name="allergens" type="allergensType" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+   </xs:complexType>
+
+   <xs:complexType name="dessertType">
+      <xs:sequence>
+         <xs:element name="description" type="xs:string"/>
+         <xs:element name="price" type="xs:decimal"/>
+         <xs:element name="allergens" type="allergensType" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+   </xs:complexType>
+
+   <xs:complexType name="allergensType">
+      <xs:sequence>
+         <xs:element name="allergen" type="xs:string" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

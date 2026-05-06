@@ -1,0 +1,42 @@
+{
+  "menu": {
+    "starters": [
+      {
+        "name": "Garlic Bread",
+        "description": "Garlic bread with cheese",
+        "price": 100.00
+      },
+      {
+        "name": "Shrimp coctail",
+        "description": "Shrimp cocktail with avocado",
+        "price": 150.00
+      }
+    ],
+    "mainCourses": [
+      {
+        "name": "Beef steak",
+        "description": "Beef steak with pepper sauce",
+        "price": 250.00,
+        "allergens": ["Gluten", "Laktose"]
+      },
+      {
+        "name": "Blab la bla",
+        "description": "Blaribla",
+        "price": 179.00
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Chocolate cake",
+        "description": "Chocolate cake with ice cream",
+        "price": 100.00
+      },
+      {
+        "name": "Cheese cake",
+        "description": "Cheese cake duddli du",
+        "price": 110.00
+      }
+    ]
+  }
+}
+

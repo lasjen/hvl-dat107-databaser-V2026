@@ -1,0 +1,42 @@
+{
+  "tvguide": [
+    {
+      "id": 1,
+      "kanal": "TV2",
+      "dato": "2025-12-09",
+      "tid": "20:00",
+      "tittel": "Farmen",
+      "kategori": "Reality",
+      "beskrivelse": "Deltakerne kjemper om å vinne Farmen."
+    },
+    {
+      "id": 2,
+      "kanal": "TV2",
+      "dato": "2025-12-09",
+      "tid": "21:00",
+      "tittel": "Nyhetene",
+      "kategori": "Nyheter",
+      "beskrivelse": "Siste nytt fra inn- og utland."
+    },
+    {
+      "id": 3,
+      "kanal": "TV2 Sport",
+      "dato": "2025-12-09",
+      "tid": "18:30",
+      "tittel": "Fotball: Premier League",
+      "kategori": "Sport",
+      "beskrivelse": "Direktekamp fra Premier League."
+    },
+    {
+      "id": 4,
+      "kanal": "TV2 Zebra",
+      "dato": "2025-12-09",
+      "tid": "22:00",
+      "tittel": "Criminal Minds",
+      "kategori": "Krim",
+      "beskrivelse": "Etterforskning av seriemordere.",
+      "reprise": true
+    }
+  ]
+}
+

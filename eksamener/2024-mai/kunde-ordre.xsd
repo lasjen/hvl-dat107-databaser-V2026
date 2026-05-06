@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns="http://eksamen.hvl.no/databaser"
+           targetNamespace="http://eksamen.hvl.no/databaser"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <xs:element name="Ordrer">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Ordre" type="OrdreType" minOccurs="1"
+                        maxOccurs="unbounded" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   <xs:complexType name="OrdreType">
+      <xs:sequence>
+         <xs:element name="Kunde" type="KundeType"/>
+         <xs:element name="Varer" type="VarerType"/>
+      </xs:sequence>
+      <xs:attribute name="OrdreId" type="xs:integer" use="required"/>
+   </xs:complexType>
+
+   <xs:complexType name="KundeType">
+      <xs:sequence>
+         <xs:element name="KundeNavn" type="xs:string" />
+         <xs:element name="Epost" type="xs:string" />
+         <xs:element type="PostAdresseType" name="PostAdresse" />
+      </xs:sequence>
+      <xs:attribute name="KundeId" type="KundeIdType" use="required" />
+   </xs:complexType>
+
+   <xs:complexType name="PostAdresseType">
+      <xs:sequence>
+         <xs:element name="Adresse" type="xs:string"/>
+         <xs:element name="Postnr" type="xs:string"/>
+         <xs:element name="Poststed" type="xs:string"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:simpleType name="VareIdType">
+      <xs:restriction base="xs:integer">
+         <xs:minInclusive value="100000" />
+      </xs:restriction>
+   </xs:simpleType>
+
+   <xs:simpleType name="KundeIdType">
+      <xs:restriction base="xs:integer">
+         <xs:minInclusive value="1000" />
+         <xs:maxExclusive value="100000" />
+      </xs:restriction>
+   </xs:simpleType>
+
+   <xs:complexType name="VarerType">
+      <xs:sequence>
+         <xs:element type="VareType" name="Vare" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="VareType">
+      <xs:sequence>
+         <xs:element name="VareNavn" type="xs:string"/>
+         <xs:element name="Antall" type="xs:integer"/>
+         <xs:element name="Pris" type="xs:decimal"/>
+         <xs:element name="RabattKode" minOccurs="0" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="VIP" />
+                  <xs:enumeration value="KAMPANJE20" />
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="VareId" use="required" />
+   </xs:complexType>
+
+</xs:schema>

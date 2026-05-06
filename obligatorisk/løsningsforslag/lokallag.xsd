@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- =====================================================
+         Simple Types
+    ====================================================== -->
+
+    <!-- Postnummer: nøyaktig 4 siffer -->
+    <xs:simpleType name="postnrType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- År: heltall mellom 1900 og 2100 -->
+    <xs:simpleType name="arType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Betalt: kun verdiene J eller N -->
+    <xs:simpleType name="betaltType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="J"/>
+            <xs:enumeration value="N"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Medlemsnummer: positivt heltall -->
+    <xs:simpleType name="medlemsnummerType">
+        <xs:restriction base="xs:positiveInteger"/>
+    </xs:simpleType>
+
+    <!-- =====================================================
+         Complex Types
+    ====================================================== -->
+
+    <!-- Adresse type (brukes både for møtelokale og medlemsadresse) -->
+    <xs:complexType name="adresseType">
+        <xs:sequence>
+            <xs:element name="gateadresse" type="xs:string"/>
+            <xs:element name="postnr"      type="postnrType"/>
+            <xs:element name="poststed"    type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Avgift type -->
+    <xs:complexType name="avgiftType">
+        <xs:sequence>
+            <xs:element name="år"            type="arType"/>
+            <xs:element name="betalt"        type="betaltType"/>
+            <xs:element name="betalingsdato" type="xs:date" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Medlemsavgifter type -->
+    <xs:complexType name="medlemsavgifterType">
+        <xs:sequence>
+            <xs:element name="avgift" type="avgiftType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Medlem type -->
+    <xs:complexType name="medlemType">
+        <xs:sequence>
+            <xs:element name="fornavn"          type="xs:string"/>
+            <xs:element name="etternavn"         type="xs:string"/>
+            <xs:element name="telefon"           type="xs:string"           minOccurs="0"/>
+            <xs:element name="epost"             type="xs:string"           minOccurs="0"/>
+            <xs:element name="adresse"           type="adresseType"/>
+            <xs:element name="aktiv"             type="xs:boolean"/>
+            <xs:element name="medlemsavgifter"   type="medlemsavgifterType"/>
+        </xs:sequence>
+        <xs:attribute name="mId" type="medlemsnummerType" use="required"/>
+    </xs:complexType>
+
+    <!-- Medlemmer type -->
+    <xs:complexType name="medlemmerType">
+        <xs:sequence>
+            <xs:element name="medlem" type="medlemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Lokallag type (rot-element) -->
+    <xs:complexType name="lokallagType">
+        <xs:sequence>
+            <xs:element name="lagnavn"              type="xs:string"/>
+            <xs:element name="møtelokale"           type="adresseType"/>
+            <xs:element name="leder_medlemsnummer"  type="medlemsnummerType"/>
+            <xs:element name="medlemmer"            type="medlemmerType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+
+    <!-- =====================================================
+         Root Element
+    ====================================================== -->
+    <xs:element name="lokallag" type="lokallagType">
+
+        <!-- (Valgfri oppgave) mId attributtet på medlem skal være unikt -->
+        <xs:unique name="unikMedlemsnummer">
+            <xs:selector xpath="medlemmer/medlem"/>
+            <xs:field    xpath="@mId"/>
+        </xs:unique>
+
+        <!-- (Valgfri oppgave) leder_medlemsnummer må referere til et eksisterende mId -->
+        <xs:keyref name="lederRef" refer="medlemKey">
+            <xs:selector xpath="."/>
+            <xs:field    xpath="leder_medlemsnummer"/>
+        </xs:keyref>
+
+        <!-- Nøkkel for mId (brukes av lederRef) -->
+        <xs:key name="medlemKey">
+            <xs:selector xpath="medlemmer/medlem"/>
+            <xs:field    xpath="@mId"/>
+        </xs:key>
+
+    </xs:element>
+
+</xs:schema>
+

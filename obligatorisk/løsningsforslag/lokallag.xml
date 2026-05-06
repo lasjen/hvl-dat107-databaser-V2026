@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lokallag.xsl"?>
+
+<lokallag id="1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="lokallag.xsd">
+
+    <lagnavn>Bergen Brettspillklubb</lagnavn>
+    <møtelokale>
+        <gateadresse>Strandgaten 15</gateadresse>
+        <postnr>5013</postnr>
+        <poststed>Bergen</poststed>
+    </møtelokale>
+    <leder_medlemsnummer>1001</leder_medlemsnummer>
+
+    <medlemmer>
+        <medlem mId="1001">
+            <fornavn>Lars</fornavn>
+            <etternavn>Jenssen</etternavn>
+            <telefon>12345678</telefon>
+            <epost>lars.jenssen@example.no</epost>
+            <adresse>
+                <gateadresse>Inndalsveien 28</gateadresse>
+                <postnr>5063</postnr>
+                <poststed>Bergen</poststed>
+            </adresse>
+            <aktiv>true</aktiv>
+            <medlemsavgifter>
+                <avgift>
+                    <år>2024</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2024-01-16</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2025</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2025-01-16</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2026</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2026-03-12</betalingsdato>
+                </avgift>
+            </medlemsavgifter>
+        </medlem>
+
+        <medlem mId="1002">
+            <fornavn>Kari</fornavn>
+            <etternavn>Hansen</etternavn>
+            <telefon>23456789</telefon>
+            <epost>kari.hansen@example.com</epost>
+            <adresse>
+                <gateadresse>Nygårdsgaten 10</gateadresse>
+                <postnr>5015</postnr>
+                <poststed>Bergen</poststed>
+            </adresse>
+            <aktiv>true</aktiv>
+            <medlemsavgifter>
+                <avgift>
+                    <år>2024</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2024-01-17</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2025</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2025-01-17</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2026</år>
+                    <betalt>N</betalt>
+                </avgift>
+            </medlemsavgifter>
+        </medlem>
+
+        <medlem mId="1003">
+            <fornavn>Ola</fornavn>
+            <etternavn>Nordmann</etternavn>
+            <telefon>34567890</telefon>
+            <epost>ola.nordmann@example.com</epost>
+            <adresse>
+                <gateadresse>Christies gate 5</gateadresse>
+                <postnr>5015</postnr>
+                <poststed>Bergen</poststed>
+            </adresse>
+            <aktiv>true</aktiv>
+            <medlemsavgifter>
+                <avgift>
+                    <år>2024</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2024-01-18</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2025</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2025-01-18</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2026</år>
+                    <betalt>N</betalt>
+                </avgift>
+            </medlemsavgifter>
+        </medlem>
+
+        <medlem mId="1004">
+            <fornavn>Emma</fornavn>
+            <etternavn>Nilsen</etternavn>
+            <telefon>45678901</telefon>
+            <epost>emma.nilsen@example.com</epost>
+            <adresse>
+                <gateadresse>Welhavens gate 20</gateadresse>
+                <postnr>5006</postnr>
+                <poststed>Bergen</poststed>
+            </adresse>
+            <aktiv>true</aktiv>
+            <medlemsavgifter>
+                <avgift>
+                    <år>2024</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2024-01-19</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2025</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2025-01-19</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2026</år>
+                    <betalt>N</betalt>
+                </avgift>
+            </medlemsavgifter>
+        </medlem>
+
+        <medlem mId="1005">
+            <fornavn>Jonas</fornavn>
+            <etternavn>Berg</etternavn>
+            <telefon>56789012</telefon>
+            <epost>jonas.berg@example.com</epost>
+            <adresse>
+                <gateadresse>Løvstakksiden 3</gateadresse>
+                <postnr>5034</postnr>
+                <poststed>Bergen</poststed>
+            </adresse>
+            <aktiv>true</aktiv>
+            <medlemsavgifter>
+                <avgift>
+                    <år>2024</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2024-01-20</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2025</år>
+                    <betalt>J</betalt>
+                    <betalingsdato>2025-01-20</betalingsdato>
+                </avgift>
+                <avgift>
+                    <år>2026</år>
+                    <betalt>N</betalt>
+                </avgift>
+            </medlemsavgifter>
+        </medlem>
+
+    </medlemmer>
+</lokallag>
+

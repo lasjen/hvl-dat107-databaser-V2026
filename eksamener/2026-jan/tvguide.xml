@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tvguide.xslt"?>
 <tvguide>
   <program id="1" kanal="TV2" dato="2025-12-09" tid="20:00">
     <tittel>Farmen</tittel>
